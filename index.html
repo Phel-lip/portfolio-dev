@@ -78,6 +78,41 @@
       border: 2px solid #06B6D4;
       flex-shrink: 0;
     }
+    .assinatura {
+  color: transparent;
+  -webkit-text-stroke: 1px #06B6D4;
+  font-style: italic;
+  margin-left: 10px;
+  opacity: 0.9;
+}
+
+.project-row {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  margin-bottom: 40px;
+}
+.project-featured {
+  border: 2px solid #06B6D4;
+  padding: 25px;
+  border-radius: 12px;
+  background: rgba(6, 182, 212, 0.05);
+  box-shadow: 0 0 15px rgba(6, 182, 212, 0.25);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.project-featured:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 25px rgba(6, 182, 212, 0.5);
+}
+
+.project-featured .project-img {
+  width: 160px;
+  height: 160px;
+}
+
+.project-featured h3 {
+  font-size: 1.4rem;
+}
 
     .header-content {
       display: flex;
@@ -242,16 +277,44 @@
         gap: 8px;
       }
     }
+
+.project-img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 2px solid #06B6D4;
+  flex-shrink: 0;
+}
+
+.project-content {
+  flex: 1;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .project-row {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .project-img {
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+  }
+}
   </style>
 </head>
 <body>
 
   <!-- NAVBAR FIXA -->
   <div class="navbar-top">
-    <a href="#sobre"><i data-lucide="user" class="icon"></i> Sobre</a>
-    <a href="#habilidades"><i data-lucide="code" class="icon"></i> Habilidades</a>
-    <a href="#projetos"><i data-lucide="gamepad" class="icon"></i> Projetos</a>
+    <a href="#projetos"><i data-lucide="gamepad" class="icon"></i> Ver Projetos</a>
     <a href="#contato"><i data-lucide="mail" class="icon"></i> Contato</a>
+    <a href="#habilidades"><i data-lucide="code" class="icon"></i> Habilidades</a>
+    <a href="#sobre"><i data-lucide="user" class="icon"></i> Sobre</a>
   </div>
 
   <div class="container">
@@ -259,18 +322,80 @@
     <header>
       <img src="fotoTF.png" alt="Foto de Thasso Felipe" class="profile-photo">
       <div class="header-content">
-        <h1>Thasso Felipe de Holanda (Phellip)</h1>
-        <p>Game Developer | Full-Stack Web, pronto para entregar soluções funcionais e transformar ideias em experiências digitais.</p>
+        <h1>
+        Thasso Felipe de Holanda 
+        <span class="assinatura">Phellip</span>
+        </h1>
+        <p>Full-Stack Web Developer<br>
+        Crio aplicações web e experiências interativas com foco em usabilidade e performance.
+        </p>
         <nav>
-          <a href="#habilidades"><i data-lucide="code" class="icon"></i> Habilidades</a>
           <a href="#projetos"><i data-lucide="gamepad" class="icon"></i> Projetos</a>
-          <a href="#sobre"><i data-lucide="user" class="icon"></i> Sobre</a>
           <a href="#contato"><i data-lucide="mail" class="icon"></i> Contato</a>
+          <a href="#habilidades"><i data-lucide="code" class="icon"></i> Habilidades</a>
+          <a href="#sobre"><i data-lucide="user" class="icon"></i> Sobre</a>
         </nav>
       </div>
     </header>
 
-    <main>
+      <main>
+  <section id="projetos">
+    <h2><i data-lucide="gamepad" class="icon"></i> Projetos em Destaque</h2> 
+
+    <!-- Projeto 1: Portal IFBA -->
+    <div class="project-row project-featured">
+      <img src="proj2.png" class="project-img">
+
+      <div class="project-content">
+        <h3 style="color:#06B6D4; margin-bottom:15px;">Página Web [Mapa de Navegação - Portal IFBA]</h3>
+
+        <p><strong>Objetivo:</strong> Criar um hub que centraliza os sites mais acessados do Portal IFBA.</p>
+
+        <p><strong>Tecnologias usadas:</strong> HTML, CSS e JavaScript.</p>
+
+        <p><strong>Recursos implementados:</strong></p>
+        <p style="margin-left:15px; line-height:1.6;">
+          <strong>• Leitura Fácil:</strong> aumenta o tamanho.<br>
+          <strong>• Alto Contraste:</strong> modo de contraste.<br>
+          <strong>• VLibras:</strong> integração com tradutor.
+        </p>
+
+        <p><strong>Resultado:</strong> Projeto aplicado na disciplina Interação Humano-Computador.</p>
+
+        <a href="https://phel-lip.github.io/Projeto-Portal/" target="_blank" style="display:inline-block; margin-top:10px; color:#0B1120; background:#06B6D4; padding:8px 12px; border-radius:8px; font-weight:bold; text-decoration:none;">Ver Projeto</a>
+      </div>
+    </div>
+
+    <!-- Projeto 2: Busca em Largura (IA) -->
+    <div class="project-row project-featured">
+      <img src="proj3.png" class="project-img">
+
+      <div class="project-content">
+        <h3 style="color:#06B6D4; margin-bottom:10px;">BFS - Busca em Largura (IA)</h3>
+        <p>Implementação interativa do algoritmo de Busca em Largura (BFS), feita na Unity.</p>
+
+        <a href="https://phel-lip.github.io/Projeto-BFSIA/" target="_blank" style="display:inline-block; margin-top:10px; color:#0B1120; background:#06B6D4; padding:8px 12px; border-radius:8px; font-weight:bold; text-decoration:none;">Ver Projeto</a>
+      </div>
+    </div>
+
+    <!-- Projeto 3: Studio de Jogos Digitais -->
+    <div class="project-row project-featured">
+      <img src="proj1.png" class="project-img">
+
+      <div class="project-content">
+        <h3 style="color:#06B6D4; margin-bottom:10px;">Studio de Jogos Digitais</h3>
+        <p>Desenvolvimento de jogos 2D, 3D, mobile e desktop, aplicando conceitos de programação e design.</p>
+        <a href="https://phel-lip.itch.io/" target="_blank" style="display:inline-block; margin-top:10px; color:#0B1120; background:#06B6D4; padding:8px 12px; border-radius:8px; font-weight:bold; text-decoration:none; transition:background 0.3s;">Ver Projeto</a>
+      </div>
+    </div>
+
+    <!-- Nota sobre novos projetos -->
+    <p style="margin-top:10px; font-style:italic; color:#67E8F9;">
+      Novos projetos em desenvolvimento.
+    </p>
+  </section>
+</main>
+
       <section id="habilidades">
         <h2><i data-lucide="code" class="icon"></i> Habilidades Técnicas</h2>
 
@@ -292,100 +417,29 @@
           <span class="tag">Visual Studio</span>
           <span class="tag">VS Code</span>
           <span class="tag">Git</span>
+          <span class="tag">Unreal Engine</span>
         </div>
 
         <h3 class="skill-subtitle"><i data-lucide="book-open" class="icon"></i> Em Aprendizado</h3>
         <div class="skill-group">
-          <span class="tag">Unreal Engine</span>
           <span class="tag">Novas tecnologias Web e Game Dev</span>
           <span class="tag">Ferramentas e práticas de Acessibilidade</span>
         </div>
       </section>
 
-      <section id="projetos">
-        <h2><i data-lucide="gamepad" class="icon"></i> Projetos Relevantes</h2>
-
-        <!-- Projeto 1: Studio de Jogos Digitais  -->
-        <div style="background-color:#1a1a1a; border:2px solid #06B6D4; border-radius:12px; padding:20px; margin-bottom:20px; box-shadow:0 0 15px rgba(6,182,212,0.25);">
-          <h3 style="color:#06B6D4; margin-bottom:10px;">Studio de Jogos Digitais</h3>
-          <p>Desenvolvimento de jogos 2D, 3D, mobile e desktop, aplicando conceitos de programação e design.</p>
-          <a href="https://phel-lip.itch.io/" target="_blank" style="display:inline-block; margin-top:10px; color:#0B1120; background:#06B6D4; padding:8px 12px; border-radius:8px; font-weight:bold; text-decoration:none; transition:background 0.3s;">Ver Projeto</a>
-        </div>
-
-        <!-- Projeto 2: Portal IFBA -->
-        <div style="background-color:#1a1a1a; border:2px solid #06B6D4; border-radius:12px; padding:20px; margin-bottom:20px; box-shadow:0 0 15px rgba(6,182,212,0.25); color:#fff;">
-          <h3 style="color:#06B6D4; margin-bottom:15px;">Página Web [Mapa de Navegação - Portal IFBA]</h3>
-
-          <p><strong>Objetivo:</strong> Criar um hub que centraliza os sites mais acessados do Portal IFBA, facilitando a navegação para estudantes e servidores, novatos ou veteranos, com foco em usabilidade e acessibilidade.</p>
-
-          <p><strong>Tecnologias usadas:</strong> HTML, CSS e JavaScript.</p>
-
-          <p><strong>Recursos implementados:</strong></p>
-          <p style="margin-left:15px; line-height:1.6;">
-            <strong>• Leitura Fácil:</strong> aumenta o tamanho de textos e botões para melhor legibilidade.<br>
-            <strong>• Alto Contraste:</strong> modo de contraste elevado para melhor visualização.<br>
-            <strong>• VLibras:</strong> integração com tradutor de Libras para acessibilidade a usuários surdos.
-          </p>
-
-          <p><strong>Resultado:</strong> Projeto aplicado na disciplina de Interação Humano-Computador, unindo conhecimentos de desenvolvimento web e boas práticas de acessibilidade.</p>
-
-          <a href="https://phel-lip.github.io/Projeto-Portal/" target="_blank" style="display:inline-block; margin-top:10px; color:#0B1120; background:#06B6D4; padding:8px 12px; border-radius:8px; font-weight:bold; text-decoration:none; transition:background 0.3s;">Ver Projeto</a>
-        </div>
-
-        <!-- Projeto 3: Busca em Largura (IA)  -->
-        <div style="background-color:#1a1a1a; border:2px solid #06B6D4; border-radius:12px; padding:20px; margin-bottom:20px; box-shadow:0 0 15px rgba(6,182,212,0.25);">
-          <h3 style="color:#06B6D4; margin-bottom:10px;">BFS - Busca em Largura (IA)</h3>
-          <p>Implementação interativa do algoritmo de Busca em Largura (BFS), feita na Unity, aplicando conceitos de Inteligência Artificial para resolver problemas de caminho em grafos.</p>
-          <a href="https://phel-lip.github.io/Projeto-BFSIA/" target="_blank" style="display:inline-block; margin-top:10px; color:#0B1120; background:#06B6D4; padding:8px 12px; border-radius:8px; font-weight:bold; text-decoration:none; transition:background 0.3s;">Ver Projeto</a>
-        </div>
-
-        <!-- Nota sobre novos projetos -->
-        <p style="margin-top:10px; font-style:italic; color:#67E8F9;">
-          Novos projetos em desenvolvimento.
-        </p>
-      </section>
-
-      <section id="habilidades-diferenciais">
-        <h2><i data-lucide="sparkles" class="icon"></i> Diferenciais</h2>
-
-        <h3 class="skill-subtitle"><i data-lucide="palette" class="icon"></i> Design & Produção Visual</h3>
-        <div class="skill-group">
-          <span class="tag">Desenho à mão</span>
-          <span class="tag">Vetor</span>
-          <span class="tag">Identidade Visual</span>
-          <span class="tag">Canvas</span>
-          <span class="tag">Blender (Animação & Modelagem 3D)</span>
-          <span class="tag">Edição de imagem</span>
-          <span class="tag">Edição de vídeo</span>
-        </div>
-
-        <h3 class="skill-subtitle"><i data-lucide="edit" class="icon"></i> Criatividade & Conteúdo</h3>
-        <div class="skill-group">
-          <span class="tag">Adobe Illustrator</span>
-          <span class="tag">Adobe Photoshop</span>
-          <span class="tag">Escrita criativa</span>
-        </div>
-
-        <h3 class="skill-subtitle"><i data-lucide="accessibility" class="icon"></i> Foco Profissional</h3>
-        <div class="skill-group">
-          <span class="tag">Experiência inicial e aprofundamento em acessibilidade digital aplicada a jogos e web (inclusive TEA e design inclusivo)</span>
-        </div>
-      </section>
-
       <section id="sobre">
-        <h2><i data-lucide="user" class="icon"></i> Resumo Profissional</h2>
-        <p>
-          Sou estudante do 5º e último período de Tecnologia em Jogos Digitais no Instituto Federal da Bahia, com experiência prática em desenvolvimento de jogos 2D, 3D, mobile e web.<br>
-          Tenho domínio em C# e Unity, e habilidades em desenvolvimento fullstack, incluindo front-end e back-end.<br>
-          Atualmente, aprofundo meus conhecimentos em Unreal Engine e novas tecnologias digitais.<br>
-          Busco aplicar criatividade e lógica para transformar ideias em soluções funcionais e experiências interativas de qualidade.
-        </p>
-      </section>
+  <h2><i data-lucide="user" class="icon"></i> Resumo Profissional</h2>
+  <p>
+    Estudante em fase de TCC em Tecnologia em Jogos Digitais pelo Instituto Federal da Bahia, com experiência prática no desenvolvimento de jogos e aplicações web.<br><br>
+    Possuo domínio em C# e Unity, além de atuação em desenvolvimento fullstack (front-end e back-end), criando soluções funcionais com foco em usabilidade e performance.<br><br>
+    Tenho interesse em acessibilidade digital aplicada a jogos e web, buscando desenvolver experiências mais inclusivas e centradas no usuário.<br><br>
+    Atualmente, busco oportunidade de estágio para aplicar meus conhecimentos, evoluir profissionalmente e contribuir com projetos reais.
+  </p>
+</section>
 
       <section id="contato">
         <h2><i data-lucide="mail" class="icon"></i> Contato</h2>
         <p><i data-lucide="mail" class="icon"></i> <a href="mailto:thasso2011@gmail.com">thasso2011@gmail.com</a></p>
-        <p><i data-lucide="link" class="icon"></i> <a href="https://linktr.ee/phel_lip" target="_blank">linktr.ee/phel_lip</a></p>
         <p><i data-lucide="globe" class="icon"></i> <a href="https://phel-lip.itch.io/" target="_blank">phel-lip.itch.io</a></p>
       </section>
     </main>
