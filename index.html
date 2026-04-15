@@ -27,31 +27,6 @@
       line-height: 1.6;
     }
 
-    .navbar-top {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      background: rgba(11, 17, 32, 0.95);
-      border-bottom: 2px solid #06B6D4;
-      z-index: 9999;
-      display: flex;
-      justify-content: center;
-      gap: 30px;
-      padding: 12px 20px;
-    }
-
-    .navbar-top a {
-      color: #06B6D4;
-      text-decoration: none;
-      font-weight: bold;
-      transition: color 0.3s;
-    }
-
-    .navbar-top a:hover {
-      color: #0891B2;
-    }
-
     .container {
       background-color: #0F172A;
       border-radius: 16px;
@@ -85,21 +60,252 @@
   margin-left: 10px;
   opacity: 0.9;
 }
+.about-section {
+  margin-top: 60px;
+}
 
-.project-row {
+.about-container {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  margin-top: 30px;
+}
+
+.about-photo {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #06B6D4;
+  box-shadow: 0 0 20px rgba(6, 182, 212, 0.3);
+  flex-shrink: 0;
+}
+
+.about-text {
+  flex: 1;
+}
+
+.about-text p {
+  margin-bottom: 15px;
+  color: #CBD5F5;
+  line-height: 1.6;
+}
+
+.hero {
+  min-height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* topo */
+.hero-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+}
+
+.logo {
+  font-weight: bold;
+  color: #E2E8F0;
+  letter-spacing: 2px;
+}
+
+.hero-nav a {
+  margin-left: 20px;
+  color: #E2E8F0;
+  text-decoration: none;
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+.hero-nav a:hover {
+  opacity: 1;
+  color: #06B6D4;
+}
+
+.navbar-top {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  padding: 10px 0;
+  background: rgba(11, 17, 32, 0.7);
+  backdrop-filter: blur(10px);
+  z-index: 100;
+}
+
+/* conteúdo principal */
+.hero-content {
+  margin-top: 120px;
+}
+
+.hero-intro {
+  font-style: italic;
+  color: #67E8F9;
+  margin-bottom: 10px;
+}
+
+.hero-content h1 {
+  font-size: 3.5rem;
+  font-weight: 800; /* mais forte */
+  letter-spacing: 1px;
+}
+
+.hero-content h2 {
+  font-size: 1.8rem;
+  color: #94A3B8;
+  margin-top: 10px;
+}
+
+.projects-carousel {
   display: flex;
   gap: 20px;
-  align-items: flex-start;
-  margin-bottom: 40px;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  padding-bottom: 10px;
+
+  scroll-snap-type: x mandatory;
+  scroll-padding-left: 20px;
+
+  justify-content: flex-start;
+  -webkit-overflow-scrolling: touch;
 }
-.project-featured {
-  border: 2px solid #06B6D4;
-  padding: 25px;
-  border-radius: 12px;
+.projects-carousel::-webkit-scrollbar {
+  display: none;
+}
+
+.project-card {
+  scroll-snap-align: center;
+  backdrop-filter: blur(10px);
+  pointer-events: auto;
+}
+
+.project-stack .tag {
+  opacity: 0.8;
+}
+
+.project-card:hover .project-stack .tag {
+  opacity: 1;
+  transform: scale(1.05);
+}
+
+.projects-carousel::-webkit-scrollbar {
+  height: 6px;
+}
+
+.projects-carousel::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.projects-carousel::-webkit-scrollbar-thumb {
+  background: #06B6D4;
+  border-radius: 10px;
+}
+
+.project-card {
+  min-width: 280px;
+  max-width: 280px;
+  flex-shrink: 0;
+}
+.carousel-wrapper {
+  position: relative;
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 40%;
+  transform: translateY(-50%);
+  background: rgba(6, 182, 212, 0.2);
+  border: none;
+  color: #06B6D4;
+  font-size: 2rem;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 50%;
+  z-index: 10;
+}
+
+.carousel-btn:hover {
+  background: rgba(6, 182, 212, 0.5);
+}
+.carousel-btn:active {
+  transform: translateY(-50%) scale(0.9);
+}
+
+.carousel-btn.left {
+  left: -10px;
+}
+
+.carousel-btn.right {
+  right: -10px;
+}
+
+.project-card {
   background: rgba(6, 182, 212, 0.05);
-  box-shadow: 0 0 15px rgba(6, 182, 212, 0.25);
+  border: 1px solid #06B6D4;
+  border-radius: 12px;
+  padding: 15px;
   transition: transform 0.2s, box-shadow 0.2s;
 }
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 20px rgba(6, 182, 212, 0.4);
+}
+
+.project-card img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.project-card h3 {
+  color: #06B6D4;
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+}
+
+.project-card p {
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+}
+
+.project-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.project-buttons a {
+  flex: 1;
+  text-align: center;
+  padding: 6px;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.btn-demo {
+  background: #06B6D4;
+  color: #0B1120;
+}
+
+.btn-code {
+  border: 1px solid #06B6D4;
+  color: #06B6D4;
+}
+
+.project-stack {
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
 .project-featured:hover {
   transform: translateY(-5px);
   box-shadow: 0 0 25px rgba(6, 182, 212, 0.5);
@@ -114,12 +320,6 @@
   font-size: 1.4rem;
 }
 
-    .header-content {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    }
-
     header h1 {
       font-size: 2.5rem;
       color: #06B6D4;
@@ -131,20 +331,10 @@
       color: #67E8F9;
     }
 
-    header nav a {
-      margin-right: 10px;
-      color: #06B6D4;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    header nav a:hover {
-      color: #0891B2;
-    }
-
     section {
       max-width: 800px;
       margin: 40px auto;
+      scroll-margin-top: 100px;
     }
 
     h2 {
@@ -209,6 +399,17 @@
       text-decoration: underline;
     }
 
+        @media (max-width: 768px) {
+      .about-container {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .about-photo {
+        width: 140px;
+        height: 140px;
+      }
+    }
     @media (max-width: 768px) {
       header {
         flex-direction: row;
@@ -225,17 +426,50 @@
         font-size: 0.9rem;
       }
 
-      .navbar-top {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 15px;
-      }
-
       .container {
         margin: 120px 20px 40px;
         padding: 30px 20px;
       }
     }
+    .contact-section {
+  text-align: center;
+  margin-top: 60px;
+}
+
+.contact-text {
+  margin: 30px 0;
+}
+
+.contact-question {
+  font-size: 1.2rem;
+  color: #94A3B8;
+}
+
+.contact-highlight {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #06B6D4;
+  margin: 10px 0;
+}
+
+.contact-description {
+  color: #CBD5F5;
+  margin-top: 10px;
+  line-height: 1.6;
+}
+
+.contact-links p {
+  margin: 10px 0;
+}
+
+.contact-links a {
+  font-weight: bold;
+  color: #06B6D4;
+}
+
+.contact-links a:hover {
+  color: #67E8F9;
+}
 
     /* Subtítulos da seção de habilidades */
     .skill-subtitle {
@@ -309,102 +543,290 @@
 </head>
 <body>
 
-  <!-- NAVBAR FIXA -->
   <div class="navbar-top">
-    <a href="#projetos"><i data-lucide="gamepad" class="icon"></i> Ver Projetos</a>
-    <a href="#contato"><i data-lucide="mail" class="icon"></i> Contato</a>
-    <a href="#habilidades"><i data-lucide="code" class="icon"></i> Habilidades</a>
-    <a href="#sobre"><i data-lucide="user" class="icon"></i> Sobre</a>
-  </div>
+  <a href="curriculo.pdf" target="_blank">Currículo</a>
+  <a href="https://github.com/Phel-lip" target="_blank">GitHub</a>
+  <a href="https://linkedin.com/in/thassoholanda" target="_blank">LinkedIn</a>
+</div>
 
   <div class="container">
 
-    <header>
-      <img src="fotoTF.png" alt="Foto de Thasso Felipe" class="profile-photo">
-      <div class="header-content">
-        <h1>
-        Thasso Felipe de Holanda 
-        <span class="assinatura">Phellip</span>
-        </h1>
-        <p>Full-Stack Web Developer<br>
-        Crio aplicações web e experiências interativas com foco em usabilidade e performance.
-        </p>
-        <nav>
-          <a href="#projetos"><i data-lucide="gamepad" class="icon"></i> Projetos</a>
-          <a href="#contato"><i data-lucide="mail" class="icon"></i> Contato</a>
-          <a href="#habilidades"><i data-lucide="code" class="icon"></i> Habilidades</a>
-          <a href="#sobre"><i data-lucide="user" class="icon"></i> Sobre</a>
+        <header class="hero">
+
+      <div class="hero-top">
+        <span class="logo">{dev-phellip}</span>
+
+        <nav class="hero-nav">
+          <a href="#sobre">01. sobre</a>
+          <a href="#projetos">02. projetos</a>
+          <a href="#conhecimentos">03. conhecimentos</a>
+          <a href="#contato">04. contato</a>
         </nav>
       </div>
+
+      <div class="hero-content">
+        <p class="hero-intro">👋 Oi, meu nome é</p>
+
+        <h1>Thasso Holanda.</h1>
+
+        <h2>Desenvolvedor FullStack Web | Game Dev</h2>
+      </div>
+
     </header>
 
       <main>
-  <section id="projetos">
-    <h2><i data-lucide="gamepad" class="icon"></i> Projetos em Destaque</h2> 
 
-    <!-- Projeto 1: Portal IFBA -->
-    <div class="project-row project-featured">
-      <img src="proj2.png" class="project-img">
+    <section id="sobre" class="about-section">
+    <h2>01. Sobre Mim</h2>
 
-      <div class="project-content">
-        <h3 style="color:#06B6D4; margin-bottom:15px;">Página Web [Mapa de Navegação - Portal IFBA]</h3>
+    <div class="about-container">
+      
+      <img src="fotoTF.png" alt="Foto de Thasso" class="about-photo">
 
-        <p><strong>Objetivo:</strong> Criar um hub que centraliza os sites mais acessados do Portal IFBA.</p>
-
-        <p><strong>Tecnologias usadas:</strong> HTML, CSS e JavaScript.</p>
-
-        <p><strong>Recursos implementados:</strong></p>
-        <p style="margin-left:15px; line-height:1.6;">
-          <strong>• Leitura Fácil:</strong> aumenta o tamanho.<br>
-          <strong>• Alto Contraste:</strong> modo de contraste.<br>
-          <strong>• VLibras:</strong> integração com tradutor.
+      <div class="about-text">
+        <p>
+          Olá! Meu nome é Thasso Felipe, atualmente estou concluindo a última etapa do TCC na graduação em Tecnologia em Jogos Digitais pelo IFBA, onde minha trajetória começou com experiência prática no desenvolvimento de jogos e aplicações web. Hoje busco me manter constante e com foco como desenvolvedor FullStack.
         </p>
 
-        <p><strong>Resultado:</strong> Projeto aplicado na disciplina Interação Humano-Computador.</p>
+        <p>
+          Escolhi essa trilha por possuir familiaridade com design e edição, o que contribui para interfaces mais intuitivas e bem construídas. 
+          Gosto de transformar ideias em experiências interativas, principalmente envolvendo jogos e sistemas gamificados.
+        </p>
 
-        <a href="https://phel-lip.github.io/Projeto-Portal/" target="_blank" style="display:inline-block; margin-top:10px; color:#0B1120; background:#06B6D4; padding:8px 12px; border-radius:8px; font-weight:bold; text-decoration:none;">Ver Projeto</a>
+        <p>
+          Atualmente estou a procura da minha primeira oportunidade como desenvolvedor, onde possa crescer profissionalmente e contribuir com projetos reais.
+        </p>
       </div>
+
     </div>
-
-    <!-- Projeto 2: Busca em Largura (IA) -->
-    <div class="project-row project-featured">
-      <img src="proj3.png" class="project-img">
-
-      <div class="project-content">
-        <h3 style="color:#06B6D4; margin-bottom:10px;">BFS - Busca em Largura (IA)</h3>
-        <p>Implementação interativa do algoritmo de Busca em Largura (BFS), feita na Unity.</p>
-
-        <a href="https://phel-lip.github.io/Projeto-BFSIA/" target="_blank" style="display:inline-block; margin-top:10px; color:#0B1120; background:#06B6D4; padding:8px 12px; border-radius:8px; font-weight:bold; text-decoration:none;">Ver Projeto</a>
-      </div>
-    </div>
-
-    <!-- Projeto 3: Studio de Jogos Digitais -->
-    <div class="project-row project-featured">
-      <img src="proj1.png" class="project-img">
-
-      <div class="project-content">
-        <h3 style="color:#06B6D4; margin-bottom:10px;">Studio de Jogos Digitais</h3>
-        <p>Desenvolvimento de jogos 2D, 3D, mobile e desktop, aplicando conceitos de programação e design.</p>
-        <a href="https://phel-lip.itch.io/" target="_blank" style="display:inline-block; margin-top:10px; color:#0B1120; background:#06B6D4; padding:8px 12px; border-radius:8px; font-weight:bold; text-decoration:none; transition:background 0.3s;">Ver Projeto</a>
-      </div>
-    </div>
-
-    <!-- Nota sobre novos projetos -->
-    <p style="margin-top:10px; font-style:italic; color:#67E8F9;">
-      Novos projetos em desenvolvimento.
-    </p>
   </section>
-</main>
 
-      <section id="habilidades">
-        <h2><i data-lucide="code" class="icon"></i> Habilidades Técnicas</h2>
+  <section id="projetos">
+    <h2>02. Projetos em Destaque</h2> 
+    <div class="carousel-wrapper">
+
+  <button class="carousel-btn left" onclick="scrollProjects(-1)">‹</button>
+
+  <div class="projects-carousel" id="carousel">
+            
+            <div class="project-card project-featured">
+          <img src="proj4.png">
+
+          <h3>DailyXP</h3>
+
+          <p><strong>Destaque:</strong> Sistema de progressão com gerenciamento de estado otimizado.
+            Focada em aumentar a consistência do usuário através de feedback gamificado e progressão visual.</p>
+
+          <div class="project-buttons">
+            <a href="https://routine-app-kx96.vercel.app/" target="_blank" class="btn-demo">Demo</a>
+            <a href="https://github.com/Phel-lip/routine-app" class="btn-code">Código</a>
+          </div>
+
+          <div class="project-stack">
+            <span class="tag">React</span>
+            <span class="tag">Zustand</span>
+            <span class="tag">CSS</span>
+          </div>
+        </div>
+
+          <div class="project-card">
+        <img src="proj2.png">
+
+        <h3>Portal IFBA</h3>
+
+        <p>Hub acessível que centraliza páginas importantes do IFBA.</p>
+
+        <div class="project-buttons">
+          <a href="https://phel-lip.github.io/Projeto-Portal/" target="_blank" class="btn-demo">Demo</a>
+          <a href="https://github.com/Phel-lip/Projeto-Portal" class="btn-code">Código</a>
+        </div>
+
+        <div class="project-stack">
+          <span class="tag">HTML</span>
+          <span class="tag">CSS</span>
+          <span class="tag">JavaScript</span>
+        </div>
+      </div>
+
+            <div class="project-card">
+        <img src="proj3.png">
+
+        <h3>BFS em Unity</h3>
+
+        <p>Visualização interativa do algoritmo de busca em largura.</p>
+
+        <div class="project-buttons">
+          <a href="https://phel-lip.github.io/Projeto-BFSIA/" target="_blank" class="btn-demo">Demo</a>
+          <a href="https://github.com/Phel-lip/Projeto-BFSIA" class="btn-code">Código</a>
+        </div>
+        <div class="project-stack">
+          <span class="tag">Unity</span>
+          <span class="tag">C#</span>
+          <span class="tag">Algoritmos</span>
+        </div>
+      </div>
+
+            <div class="project-card">
+        <img src="proj1.png">
+
+        <h3>Game Studio</h3>
+
+        <p>Portfólio de jogos 2D/3D para desktop e mobile.</p>
+
+        <div class="project-buttons">
+          <a href="https://phel-lip.itch.io/" target="_blank" class="btn-demo">Demo</a>
+        </div>
+        <div class="project-stack">
+        <span class="tag">Unity</span>
+        <span class="tag">C#</span>
+        <span class="tag">Phaser 3</span>
+      </div>
+      </div>
+
+            <div class="project-card">
+      <img src="https://via.placeholder.com/300x200?text=Em+Breve">
+
+      <h3>Em breve</h3>
+
+      <p>Projeto em andamento.</p>
+
+      <div class="project-buttons">
+        <a class="btn-demo" style="opacity:0.5; pointer-events:none;">Demo</a>
+        <a class="btn-code" style="opacity:0.5; pointer-events:none;">Código</a>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <img src="https://via.placeholder.com/300x200?text=Em+Breve">
+
+      <h3>Em breve</h3>
+
+      <p>Projeto em andamento.</p>
+
+      <div class="project-buttons">
+        <a class="btn-demo" style="opacity:0.5; pointer-events:none;">Demo</a>
+        <a class="btn-code" style="opacity:0.5; pointer-events:none;">Código</a>
+      </div>
+    </div>
+
+     <div class="project-card project-featured">
+          <img src="proj4.png">
+
+          <h3>DailyXP</h3>
+
+          <p><strong>Destaque:</strong> Sistema de progressão com gerenciamento de estado otimizado.
+             Focada em aumentar a consistência do usuário através de feedback gamificado e progressão visual.</p>
+
+          <div class="project-buttons">
+            <a href="https://routine-app-kx96.vercel.app/" target="_blank" class="btn-demo">Demo</a>
+            <a href="https://github.com/Phel-lip/routine-app" class="btn-code">Código</a>
+          </div>
+          <div class="project-stack">
+            <span class="tag">React</span>
+            <span class="tag">Zustand</span>
+            <span class="tag">CSS</span>
+          </div>
+        </div>
+
+      <div class="project-card">
+        <img src="proj2.png">
+
+        <h3>Portal IFBA</h3>
+
+        <p>Hub acessível que centraliza páginas importantes do IFBA.</p>
+
+        <div class="project-buttons">
+          <a href="https://phel-lip.github.io/Projeto-Portal/" target="_blank" class="btn-demo">Demo</a>
+          <a href="https://github.com/Phel-lip/Projeto-Portal" class="btn-code">Código</a>
+        </div>
+
+        <div class="project-stack">
+          <span class="tag">HTML</span>
+          <span class="tag">CSS</span>
+          <span class="tag">JavaScript</span>
+        </div>
+      </div>
+
+            <div class="project-card">
+        <img src="proj3.png">
+
+        <h3>BFS em Unity</h3>
+
+        <p>Visualização interativa do algoritmo de busca em largura.</p>
+
+        <div class="project-buttons">
+          <a href="https://phel-lip.github.io/Projeto-BFSIA/" target="_blank" class="btn-demo">Demo</a>
+          <a href="https://github.com/Phel-lip/Projeto-BFSIA" class="btn-code">Código</a>
+        </div>
+
+        <div class="project-stack">
+          <span class="tag">HTML</span>
+          <span class="tag">CSS</span>
+          <span class="tag">JavaScript</span>
+        </div>
+
+      </div>
+
+            <div class="project-card">
+        <img src="proj1.png">
+
+        <h3>Game Studio</h3>
+
+        <p>Portfólio de jogos 2D/3D para desktop e mobile.</p>
+
+        <div class="project-buttons">
+          <a href="https://phel-lip.itch.io/" target="_blank" class="btn-demo">Demo</a>
+        </div>
+
+        <div class="project-stack">
+          <span class="tag">Unity</span>
+          <span class="tag">C#</span>
+          <span class="tag">Phaser 3</span>
+        </div>
+      </div>
+
+            <div class="project-card">
+      <img src="https://via.placeholder.com/300x200?text=Em+Breve">
+
+      <h3>Em breve</h3>
+
+      <p>Projeto em andamento.</p>
+
+      <div class="project-buttons">
+        <a class="btn-demo" style="opacity:0.5; pointer-events:none;">Demo</a>
+        <a class="btn-code" style="opacity:0.5; pointer-events:none;">Código</a>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <img src="https://via.placeholder.com/300x200?text=Em+Breve">
+
+      <h3>Em breve</h3>
+
+      <p>Projeto em andamento.</p>
+
+      <div class="project-buttons">
+        <a class="btn-demo" style="opacity:0.5; pointer-events:none;">Demo</a>
+        <a class="btn-code" style="opacity:0.5; pointer-events:none;">Código</a>
+      </div>
+    </div>
+
+      </div>
+
+      <button class="carousel-btn right" onclick="scrollProjects(1)">›</button>
+
+    </div>
+
+      <section id="conhecimentos">
+        <h2>03. Conhecimentos</h2>
 
         <h3 class="skill-subtitle"><i data-lucide="cpu" class="icon"></i> Principais Competências</h3>
         <div class="skill-group">
           <span class="tag">C#</span>
           <span class="tag">Unity (2D, 3D, Mobile, Multiplayer, Acessibilidade)</span>
           <span class="tag">Desenvolvimento Web (HTML, CSS, JavaScript)</span>
-          <span class="tag">Full-Stack Web (Experiência com Front-end e Back-end)</span>
+          <span class="tag">React (Zustand | dnd-kit)</span>
+          <span class="tag">Full-Stack Web (REST APIs, integração e UI)</span>
         </div>
 
         <h3 class="skill-subtitle"><i data-lucide="settings" class="icon"></i> Outras Linguagens e Ferramentas</h3>
@@ -412,7 +834,7 @@
           <span class="tag">Excel</span>
           <span class="tag">HeidiSQL</span>
           <span class="tag">Lua</span>
-          <span class="tag">Python (básico)</span>
+          <span class="tag">Python</span>
           <span class="tag">C++ (básico)</span>
           <span class="tag">Visual Studio</span>
           <span class="tag">VS Code</span>
@@ -422,31 +844,48 @@
 
         <h3 class="skill-subtitle"><i data-lucide="book-open" class="icon"></i> Em Aprendizado</h3>
         <div class="skill-group">
-          <span class="tag">Novas tecnologias Web e Game Dev</span>
+          <span class="tag">Novas tecnologias Web</span>
           <span class="tag">Ferramentas e práticas de Acessibilidade</span>
         </div>
       </section>
 
-      <section id="sobre">
-  <h2><i data-lucide="user" class="icon"></i> Resumo Profissional</h2>
-  <p>
-    Estudante em fase de TCC em Tecnologia em Jogos Digitais pelo Instituto Federal da Bahia, com experiência prática no desenvolvimento de jogos e aplicações web.<br><br>
-    Possuo domínio em C# e Unity, além de atuação em desenvolvimento fullstack (front-end e back-end), criando soluções funcionais com foco em usabilidade e performance.<br><br>
-    Tenho interesse em acessibilidade digital aplicada a jogos e web, buscando desenvolver experiências mais inclusivas e centradas no usuário.<br><br>
-    Atualmente, busco oportunidade de estágio para aplicar meus conhecimentos, evoluir profissionalmente e contribuir com projetos reais.
-  </p>
-</section>
-
-      <section id="contato">
+      <section id="contato" class="contact-section">
         <h2><i data-lucide="mail" class="icon"></i> Contato</h2>
-        <p><i data-lucide="mail" class="icon"></i> <a href="mailto:thasso2011@gmail.com">thasso2011@gmail.com</a></p>
-        <p><i data-lucide="globe" class="icon"></i> <a href="https://phel-lip.itch.io/" target="_blank">phel-lip.itch.io</a></p>
+
+        <div class="contact-text">
+          <p class="contact-question">Qual é o próximo passo?</p>
+
+          <p class="contact-highlight">Entrar em contato!</p>
+
+          <p class="contact-description">
+            Estou a procura da minha primeira oportunidade na área de desenvolvedor.<br>
+            Vamos conversar melhor sobre isso, me chama no LinkedIn.
+          </p>
+        </div>
+
+        <div class="contact-links">
+          <p>
+            <i data-lucide="mail" class="icon"></i> 
+            <a href="mailto:thasso2011@gmail.com">thasso2011@gmail.com</a>
+          </p>
+
+          <p>
+            <i data-lucide="globe" class="icon"></i> 
+            <a href="https://phel-lip.itch.io/" target="_blank">phel-lip.itch.io</a>
+          </p>
+
+          <p>
+            <i data-lucide="user" class="icon"></i> 
+            <a href="https://linkedin.com/in/thassoholanda" target="_blank">linkedin.com/in/thassoholanda</a>
+          </p>
+        </div>
+
       </section>
     </main>
 
     <footer>
-      <p>&copy; 2025 Thasso Felipe. Todos os direitos reservados.</p>
-      <a href="curriculo.pdf" target="_blank" 
+      <p>&copy; 2026 Thasso Holanda. Todos os direitos reservados.</p>
+      <a href="Thasso_Holanda_Desenvolvedor.pdf" target="_blank" 
         style="display:inline-block; margin-top:15px; color:#0B1120; background:#06B6D4; padding:10px 18px; border-radius:8px; font-weight:bold; text-decoration:none; transition:background 0.3s;">
         <i data-lucide="file-down" class="icon" style="color:#0B1120;"></i> Baixar Currículo
       </a>
@@ -455,6 +894,80 @@
 
   <script>
     lucide.createIcons({ color: "#06B6D4" });
+    let currentIndex = 0;
+let container;
+let cards;
+let total;
+
+window.onload = () => {
+  container = document.getElementById('carousel');
+  cards = container.querySelectorAll('.project-card');
+  total = cards.length / 2;
+
+  const startCard = cards[total];
+  const containerWidth = container.offsetWidth;
+
+  container.scrollLeft =
+    startCard.offsetLeft - (containerWidth / 2) + (startCard.offsetWidth / 2);
+
+  currentIndex = total;
+  
+  container.addEventListener("touchstart", (e) => {
+    startX = e.touches[0].clientX;
+  });
+
+  container.addEventListener("touchend", (e) => {
+    endX = e.changedTouches[0].clientX;
+    handleSwipe();
+  });
+};
+
+function scrollProjects(direction) {
+  const containerWidth = container.offsetWidth;
+
+  currentIndex += direction;
+
+  const card = cards[currentIndex];
+
+  container.scrollTo({
+    left: card.offsetLeft - (containerWidth / 2) + (card.offsetWidth / 2),
+    behavior: 'smooth'
+  });
+
+  // 🔁 LOOP INVISÍVEL PERFEITO
+  setTimeout(() => {
+    if (currentIndex >= total * 2 - 1) {
+      currentIndex = total;
+      const resetCard = cards[currentIndex];
+
+      container.scrollLeft =
+        resetCard.offsetLeft - (containerWidth / 2) + (resetCard.offsetWidth / 2);
+    }
+
+    if (currentIndex <= 0) {
+      currentIndex = total;
+      const resetCard = cards[currentIndex];
+
+      container.scrollLeft =
+        resetCard.offsetLeft - (containerWidth / 2) + (resetCard.offsetWidth / 2);
+    }
+  }, 300);
+}
+
+  let startX = 0;
+  let endX = 0;
+
+  function handleSwipe() {
+    const diff = startX - endX;
+
+    if (Math.abs(diff) > 50) { // sensibilidade
+      if (diff > 0) {
+        scrollProjects(1); // swipe pra esquerda
+      } else {
+        scrollProjects(-1); // swipe pra direita
+      }
+    }
+  }
   </script>
 </body>
 </html>
