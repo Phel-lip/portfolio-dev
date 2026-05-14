@@ -3,556 +3,22 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Thasso Felipe | Portfólio Dev</title>
-  <meta name="description" content="Portfólio de Thasso Felipe - Desenvolvedor Front-End com foco em React, TypeScript e interfaces modernas.">
+  <title>Thasso Holanda | Portfólio Dev</title>
+  <meta name="description" content="Portfólio de Thasso Holanda, desenvolvedor Front-End com foco em interfaces interativas, experiência do usuário e aplicações web."/>
   <script src="https://unpkg.com/lucide@latest"></script>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Segoe UI', sans-serif;
-    }
-
-    body, html {
-      height: 100%;
-      overflow-x: hidden;
-    }
-
-    body {
-      position: relative;
-      background: linear-gradient(135deg, #0B1120, #111827, #1E293B);
-      background-attachment: fixed;
-      color: #E2E8F0;
-      line-height: 1.6;
-    }
-
-    .container {
-      background-color: #0F172A;
-      border-radius: 16px;
-      box-shadow: 0 0 20px rgba(6, 182, 212, 0.15);
-      border: 1px solid #06B6D4;
-      max-width: 1000px;
-      margin: 100px auto 40px;
-      padding: 40px 30px;
-    }
-
-    header {
-      display: flex;
-      align-items: center;
-      gap: 30px;
-      margin-bottom: 40px;
-      padding-left: 60px;
-    }
-
-    .profile-photo {
-      width: 120px;
-      height: 120px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 2px solid #06B6D4;
-      flex-shrink: 0;
-    }
-    .assinatura {
-  color: transparent;
-  -webkit-text-stroke: 1px #06B6D4;
-  font-style: italic;
-  margin-left: 10px;
-  opacity: 0.9;
-}
-.about-section {
-  margin-top: 60px;
-}
-
-.about-container {
-  display: flex;
-  align-items: center;
-  gap: 40px;
-  margin-top: 30px;
-}
-
-.about-photo {
-  width: 160px;
-  height: 160px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 2px solid #06B6D4;
-  box-shadow: 0 0 20px rgba(6, 182, 212, 0.3);
-  flex-shrink: 0;
-}
-
-.about-text {
-  flex: 1;
-}
-
-.about-text p {
-  margin-bottom: 15px;
-  color: #CBD5F5;
-  line-height: 1.6;
-}
-
-.hero {
-  min-height: auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-/* topo */
-.hero-top {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px 0;
-}
-
-.logo {
-  font-weight: bold;
-  color: #E2E8F0;
-  letter-spacing: 2px;
-}
-
-.hero-nav a {
-  margin-left: 20px;
-  color: #E2E8F0;
-  text-decoration: none;
-  font-size: 0.9rem;
-  opacity: 0.8;
-}
-
-.hero-nav a:hover {
-  opacity: 1;
-  color: #06B6D4;
-}
-
-.navbar-top {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  gap: 40px;
-  padding: 10px 0;
-  background: rgba(11, 17, 32, 0.7);
-  backdrop-filter: blur(10px);
-  z-index: 100;
-}
-
-/* conteúdo principal */
-.hero-content {
-  margin-top: 120px;
-}
-
-.hero-intro {
-  font-style: italic;
-  color: #67E8F9;
-  margin-bottom: 10px;
-}
-
-.hero-content h1 {
-  font-size: 3.5rem;
-  font-weight: 800; /* mais forte */
-  letter-spacing: 1px;
-}
-
-.hero-content h2 {
-  font-size: 1.8rem;
-  color: #94A3B8;
-  margin-top: 10px;
-}
-
-.projects-carousel {
-  display: flex;
-  gap: 20px;
-  overflow-x: hidden;
-  scroll-behavior: smooth;
-  padding-bottom: 10px;
-
-  scroll-snap-type: x mandatory;
-  scroll-padding-left: 20px;
-
-  justify-content: flex-start;
-  -webkit-overflow-scrolling: touch;
-}
-.projects-carousel::-webkit-scrollbar {
-  display: none;
-}
-
-.project-card {
-  scroll-snap-align: center;
-  backdrop-filter: blur(10px);
-  pointer-events: auto;
-}
-
-.project-stack .tag {
-  opacity: 0.8;
-}
-
-.project-card:hover .project-stack .tag {
-  opacity: 1;
-  transform: scale(1.05);
-}
-
-.projects-carousel::-webkit-scrollbar {
-  height: 6px;
-}
-
-.projects-carousel::-webkit-scrollbar-track {
-  background: transparent;
-}
-
-.projects-carousel::-webkit-scrollbar-thumb {
-  background: #06B6D4;
-  border-radius: 10px;
-}
-
-.project-card {
-  min-width: 280px;
-  max-width: 280px;
-  flex-shrink: 0;
-}
-.carousel-wrapper {
-  position: relative;
-}
-
-.carousel-btn {
-  position: absolute;
-  top: 40%;
-  transform: translateY(-50%);
-  background: rgba(6, 182, 212, 0.2);
-  border: none;
-  color: #06B6D4;
-  font-size: 2rem;
-  cursor: pointer;
-  padding: 10px;
-  border-radius: 50%;
-  z-index: 10;
-}
-
-.carousel-btn:hover {
-  background: rgba(6, 182, 212, 0.5);
-}
-.carousel-btn:active {
-  transform: translateY(-50%) scale(0.9);
-}
-
-.carousel-btn.left {
-  left: -10px;
-}
-
-.carousel-btn.right {
-  right: -10px;
-}
-
-.project-card {
-  background: rgba(6, 182, 212, 0.05);
-  border: 1px solid #06B6D4;
-  border-radius: 12px;
-  padding: 15px;
-  transition: transform 0.2s, box-shadow 0.2s;
-}
-
-.project-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 0 20px rgba(6, 182, 212, 0.4);
-}
-
-.project-card img {
-  width: 100%;
-  border-radius: 8px;
-  margin-bottom: 10px;
-}
-
-.project-card h3 {
-  color: #06B6D4;
-  font-size: 1.1rem;
-  margin-bottom: 8px;
-}
-
-.project-card p {
-  font-size: 0.9rem;
-  margin-bottom: 10px;
-}
-
-.project-buttons {
-  display: flex;
-  gap: 10px;
-}
-
-.project-buttons a {
-  flex: 1;
-  text-align: center;
-  padding: 6px;
-  border-radius: 6px;
-  font-size: 0.85rem;
-  font-weight: bold;
-  text-decoration: none;
-}
-
-.btn-demo {
-  background: #06B6D4;
-  color: #0B1120;
-}
-
-.btn-code {
-  border: 1px solid #06B6D4;
-  color: #06B6D4;
-}
-
-.project-stack {
-  margin-top: 10px;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 6px;
-}
-
-.project-featured:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 0 25px rgba(6, 182, 212, 0.5);
-}
-
-.project-featured .project-img {
-  width: 160px;
-  height: 160px;
-}
-
-.project-featured h3 {
-  font-size: 1.4rem;
-}
-
-    header h1 {
-      font-size: 2.5rem;
-      color: #06B6D4;
-    }
-
-    header p {
-      margin: 10px 0;
-      font-style: italic;
-      color: #67E8F9;
-    }
-
-    section {
-      max-width: 800px;
-      margin: 40px auto;
-      scroll-margin-top: 100px;
-    }
-
-    h2 {
-      border-bottom: 1px solid #1E293B;
-      margin-bottom: 20px;
-      color: #67E8F9;
-    }
-
-    .icon {
-      width: 18px;
-      height: 18px;
-      vertical-align: middle;
-      margin-right: 6px;
-      color: #06B6D4;
-    }
-
-    ul {
-      list-style: none;
-      padding-left: 0;
-    }
-
-    ul li::before {
-      content: '•';
-      color: #06B6D4;
-      margin-right: 8px;
-    }
-
-    ul li {
-      margin-bottom: 10px;
-    }
-
-    .tag {
-      display: inline-block;
-      background-color: #06B6D4;
-      color: #0B1120;
-      padding: 6px 12px;
-      border-radius: 20px;
-      font-weight: bold;
-      font-size: 0.9rem;
-      box-shadow: 0 2px 4px rgba(6, 182, 212, 0.2);
-      margin: 6px 6px 0 0;
-      transition: background 0.3s;
-    }
-
-    .tag:hover {
-      background-color: #0891B2;
-      color: #ffffff;
-    }
-
-    footer {
-      text-align: center;
-      margin-top: 50px;
-      font-size: 0.9rem;
-      color: #94A3B8;
-    }
-
-    a {
-      color: #06B6D4;
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
-
-        @media (max-width: 768px) {
-      .about-container {
-        flex-direction: column;
-        text-align: center;
-      }
-
-      .about-photo {
-        width: 140px;
-        height: 140px;
-      }
-    }
-    @media (max-width: 768px) {
-      header {
-        flex-direction: row;
-        align-items: flex-start;
-        padding-left: 20px;
-        gap: 20px;
-      }
-
-      .header-content h1 {
-        font-size: 1.6rem;
-      }
-
-      .header-content p {
-        font-size: 0.9rem;
-      }
-
-      .container {
-        margin: 120px 20px 40px;
-        padding: 30px 20px;
-      }
-    }
-    .contact-section {
-  text-align: center;
-  margin-top: 60px;
-}
-
-.contact-text {
-  margin: 30px 0;
-}
-
-.contact-question {
-  font-size: 1.2rem;
-  color: #94A3B8;
-}
-
-.contact-highlight {
-  font-size: 2rem;
-  font-weight: bold;
-  color: #06B6D4;
-  margin: 10px 0;
-}
-
-.contact-description {
-  color: #CBD5F5;
-  margin-top: 10px;
-  line-height: 1.6;
-}
-
-.contact-links p {
-  margin: 10px 0;
-}
-
-.contact-links a {
-  font-weight: bold;
-  color: #06B6D4;
-}
-
-.contact-links a:hover {
-  color: #67E8F9;
-}
-
-    /* Subtítulos da seção de habilidades */
-    .skill-subtitle {
-      margin: 25px 0 10px;
-      font-size: 1.1rem;
-      color: #06B6D4;
-      font-weight: 600;
-    }
-
-    /* Grupos de skills */
-    .skill-group {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-bottom: 20px; /* iguala espaçamento */
-    }
-
-    /* Responsividade extra para header em telas muito pequenas */
-    @media (max-width: 600px) {
-      header {
-        flex-direction: column;
-        align-items: center;
-        padding-left: 0;
-        text-align: center;
-      }
-      .header-content {
-        align-items: center;
-      }
-      .header-content h1 {
-        font-size: 1.6rem;
-      }
-      .header-content p {
-        font-size: 0.9rem;
-      }
-      .skill-subtitle {
-        font-size: 1rem;
-      }
-      .skill-group {
-        gap: 8px;
-      }
-    }
-
-.project-img {
-  width: 120px;
-  height: 120px;
-  object-fit: cover;
-  border-radius: 10px;
-  border: 2px solid #06B6D4;
-  flex-shrink: 0;
-}
-
-.project-content {
-  flex: 1;
-}
-
-/* Responsivo */
-@media (max-width: 768px) {
-  .project-row {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
-  .project-img {
-    width: 100%;
-    max-width: 250px;
-    height: auto;
-  }
-}
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
-<body>
 
+<body>
   <div class="navbar-top">
-  <a href="thasso-holanda-frontend-estagio.pdf" target="_blank">Currículo</a>
-  <a href="https://github.com/Phel-lip" target="_blank">GitHub</a>
-  <a href="https://linkedin.com/in/thassoholanda" target="_blank">LinkedIn</a>
-</div>
+    <a href="thasso-holanda-frontend-estagio.pdf" target="_blank">Currículo</a>
+    <a href="https://github.com/Phel-lip" target="_blank">GitHub</a>
+    <a href="https://linkedin.com/in/thassoholanda" target="_blank">LinkedIn</a>
+  </div>
 
   <div class="container">
 
-        <header class="hero">
-
+    <header class="hero">
       <div class="hero-top">
         <span class="logo">{dev-phellip}</span>
 
@@ -566,349 +32,135 @@
 
       <div class="hero-content">
         <p class="hero-intro">👋 Oi, meu nome é</p>
-
         <h1>Thasso Holanda.</h1>
-
-        <h2>Front-End Developer | Game Dev</h2>
+        <h2>Front-End Developer</h2>
       </div>
-
     </header>
 
-      <main>
+    <main>
 
-    <section id="sobre" class="about-section">
-    <h2>01. Sobre Mim</h2>
+      <section id="sobre" class="about-section">
+        <h2>01. Sobre Mim</h2>
+        <div class="about-container">
+          <img src="fotoTF.png" alt="Foto de Thasso" class="about-photo">
 
-    <div class="about-container">
-      
-      <img src="fotoTF.png" alt="Foto de Thasso" class="about-photo">
+          <div class="about-text">
+            <p>
+              Estudante de Jogos Digitais pelo IFBA (em fase de TCC), com experiência prática em projetos interativos, interfaces digitais e aplicações web.
+            </p>
 
-      <div class="about-text">
-        <p>
-          Sou estudante de Jogos Digitais pelo IFBA (em  fase bônus: TCC) onde minha trajetória começou com experiência prática no desenvolvimento de jogos e aplicações web. Atualmente focado em desenvolvimento Front-End.
-        </p>
+            <p>
+              Atualmente focado em desenvolvimento Front-End, unindo programação, experiência do usuário e organização visual para criar interfaces funcionais, acessíveis e interativas.
+            </p>
 
-        <p>
-          Tenho experiência com HTML, CSS, JS, TypeScript e estou evoluindo em React e Tailwind, criando projetos próprios para praticar lógica, UI e organização de código.
-        </p>
-
-        <p>
-          Busco minha primeira oportunidade como desenvolvedor para aprender na prática e crescer junto com o time.        </p>
-      </div>
-
-    </div>
-  </section>
-  <section id="projetos">
-  <h2>02. Projetos Front-End</h2> 
-
-  <div class="carousel-wrapper">
-    <button class="carousel-btn left" onclick="scrollProjects(-1)">‹</button>
-
-    <div class="projects-carousel" id="carousel">
-
-      <!-- DailyXP -->
-      <div class="project-card project-featured">
-        <img src="proj4.png">
-
-        <h3>DailyXP</h3>
-
-        <p>
-          Aplicação de rotina com sistema de progresso gamificado e organização de tarefas,
-          focada em ajudar o usuário com consistência e feedback visual.
-        </p>
-
-        <div class="project-buttons">
-          <a href="https://routine-app-kx96.vercel.app/" target="_blank" class="btn-demo">Demo</a>
-          <a href="https://github.com/Phel-lip/routine-app" target="_blank" class="btn-code">Código</a>
+            <p>
+              Desenvolvimento de projetos com HTML, CSS, JavaScript e TypeScript, evoluindo em React através de projetos próprios voltados para UI, lógica e estruturação de aplicações.
+            </p>
+          </div>
         </div>
+      </section>
 
-        <div class="project-stack">
-          <span class="tag">React / Next.js</span>
-          <span class="tag">TypeScript</span>
-          <span class="tag">Zustand</span>
-          <span class="tag">Tailwind CSS</span>
-          <span class="tag">Vercel</span>
+      <section id="projetos">
+        <h2>02. Projetos</h2>
+
+        <div class="carousel-wrapper">
+          <button class="carousel-btn left" onclick="scrollProjects(-1)">‹</button>
+          <div class="projects-carousel" id="carousel">
+
+            <div class="project-card">
+              <img src="proj1.png">
+
+              <h3>Portal IFBA</h3>
+
+              <p>
+                Projeto simples para centralizar links importantes do IFBA.
+              </p>
+
+              <div class="project-buttons">
+                <a href="https://phel-lip.github.io/Projeto-Portal/" target="_blank" class="btn-demo">Demo</a>
+                <a href="https://github.com/Phel-lip/Projeto-Portal" target="_blank" class="btn-code">Código</a>
+              </div>
+
+              <div class="project-stack">
+                <span class="tag">HTML</span>
+                <span class="tag">CSS</span>
+                <span class="tag">JavaScript</span>
+              </div>
+            </div>
+          </div>
+
+          <button class="carousel-btn right" onclick="scrollProjects(1)">›</button>
+
         </div>
-      </div>
+      </section>
 
-      <!-- Clínica -->
-      <div class="project-card project-featured">
-        <img src="proj-clinica.png">
+      <section id="conhecimentos">
 
-        <h3>Landing Page Clínica</h3>
+        <h2>03. Conhecimentos</h2>
 
-        <p>
-          Landing page focada em conversão com integração ao WhatsApp e design responsivo, utilizada numa clínica real.
-        </p>
+        <h3 class="skill-subtitle"><i data-lucide="cpu" class="icon"></i>Principais Competências</h3>
 
-        <div class="project-buttons">
-          <a href="https://evoluir-clinica.vercel.app/" target="_blank" class="btn-demo">Demo</a>
-          <a href="https://github.com/Phel-lip/clinica-landing-template" target="_blank" class="btn-code">Código</a>
-        </div>
-
-        <div class="project-stack">
-          <span class="tag">TypeScript</span>
-          <span class="tag">Tailwind CSS</span>
-          <span class="tag">Next.js</span>
-          <span class="tag">React</span>
-          <span class="tag">Vercel</span>
-        </div>
-      </div>
-
-      <!-- Portal IFBA -->
-      <div class="project-card">
-        <img src="proj2.png">
-
-        <h3>Portal IFBA</h3>
-
-        <p>
-          Projeto simples para centralizar links importantes do IFBA.
-        </p>
-
-        <div class="project-buttons">
-          <a href="https://phel-lip.github.io/Projeto-Portal/" target="_blank" class="btn-demo">Demo</a>
-          <a href="https://github.com/Phel-lip/Projeto-Portal" target="_blank" class="btn-code">Código</a>
-        </div>
-
-        <div class="project-stack">
+        <div class="skill-group">
           <span class="tag">HTML</span>
           <span class="tag">CSS</span>
           <span class="tag">JavaScript</span>
-        </div>
-      </div>
-
-    </div>
-
-    <button class="carousel-btn right" onclick="scrollProjects(1)">›</button>
-  </div>
-</section>
-
-<section id="em-andamento"> 
-  <h2>2.5. Em andamento / Outros</h2> 
-
-  <div class="carousel-wrapper">
-    <div class="projects-carousel">
-
-      <!-- React -->
-      <div class="project-card">
-        <img src="embreve.png">
-
-        <h3>Projeto React (em desenvolvimento)</h3>
-
-        <p>
-          Projeto em andamento focado em reforçar conceitos de componentes,
-          estado e organização de código com React.
-        </p>
-
-        <div class="project-stack">
-          <span class="tag">React</span>
-          <span class="tag">Em aprendizado</span>
-        </div>
-      </div>
-
-      <!-- BFS -->
-      <div class="project-card">
-        <img src="proj3.png">
-
-        <h3>BFS Algorithm Visualizer (Unity)</h3>
-
-        <p>
-          Visualizador do algoritmo BFS em Unity com exploração
-          interativa de grafos em tempo real.
-        </p>
-
-        <div class="project-buttons">
-          <a href="https://phel-lip.github.io/BFS-Algorithm-Visualizer-Unity/" target="_blank" class="btn-demo">Demo</a>
-          <a href="https://github.com/Phel-lip/BFS-Algorithm-Visualizer-Unity" target="_blank" class="btn-code">Código</a>
-        </div>
-
-        <div class="project-stack">
-          <span class="tag">Unity</span>
-          <span class="tag">C#</span>
-          <span class="tag">Algoritmos</span>
-        </div>
-      </div>
-
-      <!-- Game Studio -->
-      <div class="project-card">
-        <img src="proj1.png">
-
-        <h3>Game Studio</h3>
-
-        <p>
-          Coleção de jogos 2D e 3D desenvolvidos com foco em interatividade, lógica e prototipagem.
-        </p>
-
-        <div class="project-buttons">
-          <a href="https://phel-lip.itch.io/" target="_blank" class="btn-demo">Ver jogos</a>
-        </div>
-
-        <div class="project-stack">
-          <span class="tag">C#</span>
-          <span class="tag">Unity</span>
-          <span class="tag">Mobile</span>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-      <section id="conhecimentos">
-        <h2>03. Conhecimentos</h2>
-
-        <h3 class="skill-subtitle"><i data-lucide="cpu" class="icon"></i> Principais Competências</h3>
-        <div class="skill-group">
-          <span class="tag">HTML</span>
-          <span class="tag">CSS</span>
-          <span class="tag">JS</span>
           <span class="tag">TypeScript</span>
-          <span class="tag">Vercel</span>
-          <span class="tag">Git/GitHub</span>
-        </div>
-
-        <h3 class="skill-subtitle"><i data-lucide="settings" class="icon"></i> Outras Linguagens e Ferramentas</h3>
-        <div class="skill-group">
-          <span class="tag">Adobe Illustrator</span>
-          <span class="tag">Adobe Photoshop</span>
-          <span class="tag">Figma</span>
-          <span class="tag">C#</span>
-          <span class="tag">Lua</span>
-          <span class="tag">Banco HeidiSQL</span>
-          <span class="tag">Visual Studio</span>
           <span class="tag">VS Code</span>
-          <span class="tag">Unity (2D, 3D, Mobile, Multiplayer, Acessibilidade)</span>
-          <span class="tag">Unreal Engine</span>
+          <span class="tag">Git/GitHub</span>
+          <span class="tag">Vercel</span>
+          <span class="tag">UX/UI & Acessibilidade</span>
         </div>
 
-        <h3 class="skill-subtitle"><i data-lucide="book-open" class="icon"></i> Em Aprendizado</h3>
+        <h3 class="skill-subtitle">
+          <i data-lucide="book-open" class="icon"></i>Em Aprendizado</h3>
+
         <div class="skill-group">
           <span class="tag">React</span>
           <span class="tag">Tailwind</span>
-          <span class="tag">MySQL</span>
-          <span class="tag">Ferramentas e práticas de Acessibilidade</span>
+          <span class="tag">Node.js</span>
         </div>
       </section>
 
       <section id="contato" class="contact-section">
-        <h2><i data-lucide="mail" class="icon"></i> Contato</h2>
+
+        <h2><i data-lucide="mail" class="icon"></i>Contato</h2>
 
         <div class="contact-text">
           <p class="contact-question">Qual é o próximo passo?</p>
-
           <p class="contact-highlight">Entrar em contato!</p>
-
           <p class="contact-description">
-            Estou a procura da minha primeira oportunidade na área de desenvolvedor.<br>
-            Disponível para estágio remoto ou híbrido.<br>
-          </p>
+            Estou à procura da minha primeira oportunidade na área de desenvolvimento.<br>
+            Disponível para estágio remoto ou híbrido.</p>
         </div>
 
         <div class="contact-links">
-          <p>
-            <i data-lucide="mail" class="icon"></i> 
-            <a href="mailto:thasso2011@gmail.com">thasso2011@gmail.com</a>
-          </p>
-
-          <p>
-            <i data-lucide="globe" class="icon"></i> 
-            <a href="https://phel-lip.itch.io/" target="_blank">phel-lip.itch.io</a>
-          </p>
-
-          <p>
-            <i data-lucide="user" class="icon"></i> 
-            <a href="https://linkedin.com/in/thassoholanda" target="_blank">linkedin.com/in/thassoholanda</a>
-          </p>
+          <p><i data-lucide="mail" class="icon"></i><a href="mailto:thasso2011@gmail.com">thasso2011@gmail.com</a></p>
+          <p><i data-lucide="user" class="icon"></i><a href="https://linkedin.com/in/thassoholanda" 
+                target="_blank">linkedin.com/in/thassoholanda</a></p>
         </div>
-
       </section>
+
     </main>
 
     <footer>
       <p>&copy; 2026 Thasso Holanda. Todos os direitos reservados.</p>
-      <a href="thasso-holanda-frontend-estagio.pdf" target="_blank" 
-        style="display:inline-block; margin-top:15px; color:#0B1120; background:#06B6D4; padding:10px 18px; border-radius:8px; font-weight:bold; text-decoration:none; transition:background 0.3s;">
-        <i data-lucide="file-down" class="icon" style="color:#0B1120;"></i> Baixar Currículo
-      </a>
+
+      <a href="thasso-holanda-frontend-estagio.pdf"target="_blank"
+        style="
+          display:inline-block;
+          margin-top:15px;
+          color:#0B1120;
+          background:#06B6D4;
+          padding:10px 18px;
+          border-radius:8px;
+          font-weight:bold;
+          text-decoration:none;
+          transition:background 0.3s;
+        "><i data-lucide="file-down" class="icon"style="color:#0B1120;"></i>Baixar Currículo</a>
     </footer>
+
   </div>
-
-  <script>
-    lucide.createIcons({ color: "#06B6D4" });
-    let currentIndex = 0;
-let container;
-let cards;
-let total;
-
-window.onload = () => {
-  container = document.getElementById('carousel');
-  cards = container.querySelectorAll('.project-card');
-  total = cards.length / 2;
-
-  const startCard = cards[total];
-  const containerWidth = container.offsetWidth;
-
-  container.scrollLeft =
-    startCard.offsetLeft - (containerWidth / 2) + (startCard.offsetWidth / 2);
-
-  currentIndex = total;
   
-  container.addEventListener("touchstart", (e) => {
-    startX = e.touches[0].clientX;
-  });
-
-  container.addEventListener("touchend", (e) => {
-    endX = e.changedTouches[0].clientX;
-    handleSwipe();
-  });
-};
-
-function scrollProjects(direction) {
-  const containerWidth = container.offsetWidth;
-
-  currentIndex += direction;
-
-  const card = cards[currentIndex];
-
-  container.scrollTo({
-    left: card.offsetLeft - (containerWidth / 2) + (card.offsetWidth / 2),
-    behavior: 'smooth'
-  });
-
-  // 🔁 LOOP INVISÍVEL PERFEITO
-  setTimeout(() => {
-    if (currentIndex >= total * 2 - 1) {
-      currentIndex = total;
-      const resetCard = cards[currentIndex];
-
-      container.scrollLeft =
-        resetCard.offsetLeft - (containerWidth / 2) + (resetCard.offsetWidth / 2);
-    }
-
-    if (currentIndex <= 0) {
-      currentIndex = total;
-      const resetCard = cards[currentIndex];
-
-      container.scrollLeft =
-        resetCard.offsetLeft - (containerWidth / 2) + (resetCard.offsetWidth / 2);
-    }
-  }, 300);
-}
-
-  let startX = 0;
-  let endX = 0;
-
-  function handleSwipe() {
-    const diff = startX - endX;
-
-    if (Math.abs(diff) > 50) { // sensibilidade
-      if (diff > 0) {
-        scrollProjects(1); // swipe pra esquerda
-      } else {
-        scrollProjects(-1); // swipe pra direita
-      }
-    }
-  }
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
