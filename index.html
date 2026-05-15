@@ -6,15 +6,15 @@
   <title>Thasso Holanda | Portfólio Dev</title>
   <meta name="description" content="Portfólio de Thasso Holanda, desenvolvedor Front-End com foco em interfaces interativas, experiência do usuário e aplicações web."/>
   <script src="https://unpkg.com/lucide@latest"></script>
-  <link rel="stylesheet" href="style.css">
+  <!-- <link rel="stylesheet" href="style.css"> -->
 </head>
 
 <body>
-  <div class="navbar-top">
+  <nav class="navbar-top">
     <a href="thasso-holanda-frontend-estagio.pdf" target="_blank">Currículo</a>
     <a href="https://github.com/Phel-lip" target="_blank">GitHub</a>
     <a href="https://linkedin.com/in/thassoholanda" target="_blank">LinkedIn</a>
-  </div>
+  </nav>
 
   <div class="container">
 
@@ -41,6 +41,7 @@
 
       <section id="sobre" class="about-section">
         <h2>01. Sobre Mim</h2>
+
         <div class="about-container">
           <img src="fotoTF.png" alt="Foto de Thasso" class="about-photo">
 
@@ -65,9 +66,10 @@
 
         <div class="carousel-wrapper">
           <button class="carousel-btn left" onclick="scrollProjects(-1)">‹</button>
+
           <div class="projects-carousel" id="carousel">
 
-            <div class="project-card">
+            <article class="project-card">
               <img src="proj1.png">
 
               <h3>Portal IFBA</h3>
@@ -81,16 +83,16 @@
                 <a href="https://github.com/Phel-lip/Projeto-Portal" target="_blank" class="btn-code">Código</a>
               </div>
 
-              <div class="project-stack">
-                <span class="tag">HTML</span>
-                <span class="tag">CSS</span>
-                <span class="tag">JavaScript</span>
-              </div>
-            </div>
+              <ul class="project-stack">
+                <li class="tag">HTML</li>
+                <li class="tag">CSS</li>
+                <li class="tag">JavaScript</li>
+              </ul>
+            </article>
+
           </div>
-
+          
           <button class="carousel-btn right" onclick="scrollProjects(1)">›</button>
-
         </div>
       </section>
 
@@ -100,24 +102,54 @@
 
         <h3 class="skill-subtitle"><i data-lucide="cpu" class="icon"></i>Principais Competências</h3>
 
-        <div class="skill-group">
-          <span class="tag">HTML</span>
-          <span class="tag">CSS</span>
-          <span class="tag">JavaScript</span>
-          <span class="tag">TypeScript</span>
-          <span class="tag">VS Code</span>
-          <span class="tag">Git/GitHub</span>
-          <span class="tag">Vercel</span>
-          <span class="tag">UX/UI & Acessibilidade</span>
+        <div class="skills-categories">
+    
+          <div class="category-block">
+            <h4>Front-end</h4>
+
+            <ul class="skill-group">
+              <li class="tag">HTML</li>
+              <li class="tag">CSS</li>
+              <li class="tag">JavaScript</li>
+              <li class="tag">TypeScript</li>
+            </ul>
+          </div>
+
+          <div class="category-block">
+            <h4>Design & Conceitos</h4>
+
+            <ul class="skill-group">
+              <li class="tag">UX/UI</li>
+              <li class="tag">Acessibilidade</li>
+            </ul>
+          </div>
+
+          <div class="category-block">
+            <h4>Ferramentas & Deploy</h4>
+
+            <ul class="skill-group">
+              <li class="tag">VS Code</li>
+              <li class="tag">Git/GitHub</li>
+              <li class="tag">Vercel</li>
+            </ul>
+          </div>
+
         </div>
 
-        <h3 class="skill-subtitle">
-          <i data-lucide="book-open" class="icon"></i>Em Aprendizado</h3>
+        <h3 class="skill-subtitle"><i data-lucide="book-open" class="icon"></i>Em Aprendizado</h3>
 
-        <div class="skill-group">
-          <span class="tag">React</span>
-          <span class="tag">Tailwind</span>
-          <span class="tag">Node.js</span>
+        <div class="skills-categories">
+    
+          <div class="category-block">
+            <h4>Frameworks & Back-end</h4>
+
+            <ul class="skill-group">
+              <li class="tag">React</li>
+              <li class="tag">Tailwind</li>
+              <li class="tag">Node.js</li>
+            </ul>
+          </div>
+
         </div>
       </section>
 
@@ -127,17 +159,28 @@
 
         <div class="contact-text">
           <p class="contact-question">Qual é o próximo passo?</p>
+
           <p class="contact-highlight">Entrar em contato!</p>
+
           <p class="contact-description">
             Estou à procura da minha primeira oportunidade na área de desenvolvimento.<br>
-            Disponível para estágio remoto ou híbrido.</p>
+            Disponível para estágio remoto ou híbrido.
+          </p>
         </div>
 
-        <div class="contact-links">
-          <p><i data-lucide="mail" class="icon"></i><a href="mailto:thasso2011@gmail.com">thasso2011@gmail.com</a></p>
-          <p><i data-lucide="user" class="icon"></i><a href="https://linkedin.com/in/thassoholanda" 
-                target="_blank">linkedin.com/in/thassoholanda</a></p>
-        </div>
+        <address class="contact-links">
+          <p>
+            <i data-lucide="mail" class="icon"></i>
+            <a href="mailto:thasso2011@gmail.com">thasso2011@gmail.com</a>
+          </p>
+
+          <p>
+            <i data-lucide="user" class="icon"></i>
+            <a href="https://linkedin.com/in/thassoholanda" target="_blank">
+              linkedin.com/in/thassoholanda
+            </a>
+          </p>
+        </address>
       </section>
 
     </main>
@@ -145,22 +188,11 @@
     <footer>
       <p>&copy; 2026 Thasso Holanda. Todos os direitos reservados.</p>
 
-      <a href="thasso-holanda-frontend-estagio.pdf"target="_blank"
-        style="
-          display:inline-block;
-          margin-top:15px;
-          color:#0B1120;
-          background:#06B6D4;
-          padding:10px 18px;
-          border-radius:8px;
-          font-weight:bold;
-          text-decoration:none;
-          transition:background 0.3s;
-        "><i data-lucide="file-down" class="icon"style="color:#0B1120;"></i>Baixar Currículo</a>
+        <a href="thasso-holanda-frontend-estagio.pdf" target="_blank" class="btn-cv" aria-label="Baixar currículo de Thasso Holanda em PDF">
+        <span data-lucide="file-down" class="icon" aria-hidden="true"></span>Baixar Currículo</a>
     </footer>
-
   </div>
-  
+
   <script src="script.js"></script>
 </body>
 </html>
