@@ -9,6 +9,7 @@
     content="Portfólio de Thasso Holanda, desenvolvedor Front-End com foco em interfaces interativas, experiência do usuário e aplicações web." />
   <script src="https://unpkg.com/lucide@latest"></script>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
 </head>
 
 <body>
@@ -20,384 +21,447 @@
 
   <div class="container">
 
-    <header class="hero">
-      <div class="hero-top">
-        <span class="logo">{dev-phellip}</span>
+    <div class="game-screen">
 
-        <nav class="hero-nav">
-          <a href="#sobre">01. sobre</a>
-          <a href="#projetos">02. projetos</a>
-          <a href="#conhecimentos">03. conhecimentos</a>
-          <a href="#contato">04. contato</a>
-        </nav>
+      <span class="corner top-left"></span>
+      <span class="corner top-right"></span>
+      <span class="corner bottom-left"></span>
+      <span class="corner bottom-right"></span>
+
+      <div class="hud-status">
+        <span id="hud-left">PERFIL { dev-phellip }</span>
+        <span id="hud-center">00:00:00</span>
+        <span class="online-status">ONLINE</span>
       </div>
 
-      <div class="hero-content">
-        <p class="hero-intro">👋 Oi, meu nome é</p>
-        <h1>Thasso Holanda.</h1>
-        <h2>Front-End Developer</h2>
-      </div>
-    </header>
+      <!-- MENU PRINCIPAL -->
+      <section id="menu-screen" class="screen active">
 
-    <main>
+        <header class="game-menu">
 
-      <section id="sobre" class="about-section">
-        <h2>01. Sobre Mim</h2>
+          <div class="player-overview">
 
-        <div class="about-container">
-          <img src="fotoTF.png" alt="Foto de Thasso" class="about-photo">
+            <div class="left-panel">
 
-          <div class="about-text">
-            <p>
-              Desenvolvedor Front-End focado em interfaces interativas, trabalhando com React, JavaScript e TypeScript. 
-              Formação em Jogos Digitais pelo IFBA.
-            </p>
+              <div class="profile-top">
 
-            <p>
-              Apaixonado por UI, com experiência prática em projetos interativos, foco em organização
-              visual para criar interfaces funcionais, acessíveis e interativas.
-            </p>
+                <img src="fotoTF.png" alt="Phellip" class="menu-photo">
 
-            <p>
-              Desenvolvimento de projetos com HTML, CSS e JavaScript, além da exploração de aplicações em React 
-              voltadas para componentização, UI e estruturação de interfaces.
-            </p>
+                <div class="about-mini">
+
+                  <h4>RESUMO</h4>
+
+                  <p>
+                    Formando em Jogos Digitais pelo IFBA,
+                    migrando para desenvolvimento web com
+                    foco em Front-End.
+                  </p>
+
+                  <p>
+                    Interesse em interfaces interativas,
+                    UX e aplicações modernas.
+                  </p>
+
+                  <p class="player-achievement">
+                    EXP: Desenvolvimento Web<br>
+                    • Game Dev • UI/UX
+                  </p>
+
+                </div>
+
+              </div>
+
+              <div class="terminal-box">
+                <p>> carregando perfil...</p>
+                <p>> classe: front-end developer</p>
+                <p>> fase atual: TCC | local: AL/BA</p>
+                <p>> status: disponível para estágio</p>
+              </div>
+
+            </div>
+
+            <div class="player-data">
+              <h3>DADOS</h3>
+              <p><strong>NOME</strong> Thasso Holanda</p>
+              <p><strong>LOCAL</strong> AL/BA • Remoto/Híbrido</p>
+              <p><strong>STACK</strong> JavaScript • React • C#/.NET</p>
+              <p><strong>FORMAÇÃO</strong> Jogos Digitais - IFBA</p>
+              <p><strong>OBJETIVO</strong> Estágio Front-End</p>
+            </div>
+
           </div>
-        </div>
+
+          <p class="player-focus">
+            Atualmente aprofundando React e TypeScript
+          </p>
+
+          <nav class="game-nav">
+
+            <a href="#" data-screen="projects-screen">
+              PROJETOS
+            </a>
+
+            <a href="#" data-screen="skills-screen">
+              STACKS & OUTROS
+            </a>
+
+            <a href="#" data-screen="contact-screen">
+              CONTATO
+            </a>
+
+          </nav>
+
+        </header>
+
       </section>
 
-      <section id="projetos">
-        <h2>02. Projetos</h2>
+      <section id="projects-screen" class="screen">
 
         <div class="projects-grid">
 
-            <article class="project-card">
-            <img src="dailyxp.png" alt="Imagem do projeto DailyXP">
+          <article class="project-card">
+
+            <img src="portfolio.png" alt="Portfolio Dev">
+
+            <span class="quest-id">PROJETO DESTAQUE</span>
+
+            <h3>Portfólio Dev</h3>
+
+            <p>
+              Portfólio inspirado em interfaces de videogame,
+              apresentando projetos, habilidades e contato.
+            </p>
+
+            <div class="project-stack">
+              <span class="tag">HTML</span>
+              <span class="tag">CSS</span>
+              <span class="tag">JavaScript</span>
+            </div>
+
+            <div class="project-buttons">
+              <a href="https://phel-lip.github.io/portfolio-dev/" class="btn-demo">Demo</a>
+              <a href="https://github.com/Phel-lip/portfolio-dev" class="btn-code">Code</a>
+            </div>
+
+          </article>
+
+          <article class="project-card">
+
+            <img src="dailyxp.png" alt="DailyXP">
+
+            <span class="quest-id">PROJETO PRINCIPAL</span>
 
             <h3>DailyXP</h3>
 
             <p>
-              Aplicação gamificada de hábitos desenvolvida com React + Vite.
-              Sistema de progresso, XP, streak semanal, recompensas e persistência com localStorage.
+              Habit tracker gamificado com níveis,
+              sequências diárias e sistema de experiência.
             </p>
 
-            <div class="project-buttons">
-
-              <a
-                href="https://phel-lip.github.io/dailyxp/"
-                target="_blank"
-                class="btn-demo"
-              >
-                Demo
-              </a>
-
-              <a
-                href="https://github.com/Phel-lip/dailyxp"
-                target="_blank"
-                class="btn-code"
-              >
-                Código
-              </a>
-
+            <div class="project-stack">
+              <span class="tag">React</span>
+              <span class="tag">TypeScript</span>
+              <span class="tag">Vite</span>
+              <span class="tag">LocalStorage</span>
             </div>
 
-            <ul class="project-stack">
-              <li class="tag">React</li>
-              <li class="tag">JavaScript</li>
-              <li class="tag">Vite</li>
-              <li class="tag">CSS</li>
-              <li class="tag">localStorage</li>
-            </ul>
+            <div class="project-buttons">
+              <a href="https://phel-lip.github.io/dailyxp/" class="btn-demo">Demo</a>
+              <a href="https://github.com/Phel-lip/dailyxp" class="btn-code">Code</a>
+            </div>
+
           </article>
 
           <article class="project-card">
-            <img src="proj-clinica.png" alt="Imagem do projeto Clínica Landing">
 
-            <h3>Clinic Landing Template</h3>
+            <img src="fotoWiki.png" alt="Wiki Gamer">
+
+            <span class="quest-id">PROJETO WEB</span>
+
+            <h3>Wiki Gamer</h3>
 
             <p>
-              Landing page desenvolvida para explorar React e TypeScript
-              em uma interface moderna voltada para uma clínica real,
-              com foco em organização visual e experiência do usuário.
+              Busque e explore jogos utilizando
+              a API RAWG Video Games Database.
             </p>
 
-            <div class="project-buttons">
-
-              <a
-                href="https://evoluir-clinica.vercel.app/"
-                target="_blank"
-                class="btn-demo"
-              >
-                Demo
-              </a>
-
-              <a
-                href="https://github.com/Phel-lip/clinica-landing-template"
-                target="_blank"
-                class="btn-code"
-              >
-                Código
-              </a>
-
+            <div class="project-stack">
+              <span class="tag">CSS</span>
+              <span class="tag">JavaScript</span>
+              <span class="tag">API</span>
             </div>
 
-            <ul class="project-stack">
-              <li class="tag">React</li>
-              <li class="tag">TypeScript</li>
-              <li class="tag">Tailwind</li>
-              <li class="tag">UI Design</li>
-            </ul>
+            <div class="project-buttons">
+              <a href="https://phel-lip.github.io/wikiGamer/" class="btn-demo">Demo</a>
+              <a href="https://github.com/Phel-lip/wikiGamer" class="btn-code">Code</a>
+            </div>
+
           </article>
 
           <article class="project-card">
-            <img src="proj1.png" alt="Imagem do projeto Portal IFBA">
+
+            <img src="bfs.png" alt="BFS Visualizer">
+
+            <span class="quest-id">PROJETO ACADÊMICO</span>
+
+            <h3>BFS Visualizer</h3>
+
+            <p>
+              Visualizador interativo do algoritmo
+              Breadth-First Search desenvolvido em Unity.
+            </p>
+
+            <div class="project-stack">
+              <span class="tag">Unity</span>
+              <span class="tag">C#</span>
+              <span class="tag">Algorithms</span>
+            </div>
+
+            <div class="project-buttons">
+              <a href="https://phel-lip.github.io/BFS-Algorithm-Visualizer-Unity/" class="btn-demo">Demo</a>
+              <a href="https://github.com/Phel-lip/BFS-Algorithm-Visualizer-Unity" class="btn-code">Code</a>
+            </div>
+
+          </article>
+
+          <article class="project-card">
+
+            <img src="portalifba.png" alt="Portal IFBA">
+
+            <span class="quest-id">PROJETO WEB</span>
 
             <h3>Portal IFBA</h3>
 
             <p>
-              Projeto simples para centralizar links importantes do IFBA com Filtro de Busca.
+              Centralizador de recursos acadêmicos
+              com busca e acesso rápido.
             </p>
 
-            <div class="project-buttons">
-              <a href="https://phel-lip.github.io/Projeto-Portal/" target="_blank" class="btn-demo">
-                Demo
-              </a>
-
-              <a href="https://github.com/Phel-lip/Projeto-Portal" target="_blank" class="btn-code">
-                Código
-              </a>
+            <div class="project-stack">
+              <span class="tag">HTML</span>
+              <span class="tag">CSS</span>
+              <span class="tag">JavaScript</span>
             </div>
 
-            <ul class="project-stack">
-              <li class="tag">HTML</li>
-              <li class="tag">CSS</li>
-              <li class="tag">JavaScript</li>
-            </ul>
+            <div class="project-buttons">
+              <a href="https://phel-lip.github.io/Projeto-Portal/" class="btn-demo">Demo</a>
+              <a href="https://github.com/Phel-lip/Projeto-Portal" class="btn-code">Code</a>
+            </div>
+
           </article>
 
-        <article class="project-card">
-          <img src="fotoWiki.png" alt="Preview do projeto Wiki Gamer">
+          <article class="project-card">
 
-          <h3>Wiki Gamer</h3>
+            <img src="proj-clinica.png" alt="Clinic Landing">
 
-          <p>
-            Aplicação web desenvolvida com JavaScript consumindo a API RAWG,
-            permitindo pesquisar jogos, infos e recomendações de títulos
-            semelhantes em uma interface responsiva.
-          </p>
+            <span class="quest-id">PROJETO WEB</span>
 
-          <div class="project-buttons">
+            <h3>Clinic Landing</h3>
 
-            <a
-              href="https://phel-lip.github.io/wikiGamer/"
-              target="_blank"
-              class="btn-demo"
-            >
-              Demo
-            </a>
+            <p>
+              Landing page responsiva focada em
+              conversão, acessibilidade e UX.
+            </p>
 
-            <a
-              href="https://github.com/Phel-lip/wikiGamer"
-              target="_blank"
-              class="btn-code"
-            >
-              Código
-            </a>
+            <div class="project-stack">
+              <span class="tag">HTML</span>
+              <span class="tag">CSS</span>
+              <span class="tag">JavaScript</span>
+            </div>
 
-          </div>
+            <div class="project-buttons">
+              <a href="https://evoluir-clinica.vercel.app/" class="btn-demo">Demo</a>
+              <a href="https://github.com/Phel-lip/clinica-landing-template" class="btn-code">Code</a>
+            </div>
 
-          <ul class="project-stack">
-            <li class="tag">HTML</li>
-            <li class="tag">CSS</li>
-            <li class="tag">JavaScript</li>
-            <li class="tag">REST API</li>
-          </ul>
-        </article>
-
-        <article class="project-card">
-          <img src="jogo1.png" alt="Imagem do jogo Phaser">
-
-          <h3>Phaser Platform Game</h3>
-
-          <p>
-            Jogo de plataforma desenvolvido com JavaScript e Phaser 3,
-            focado em lógica interativa, sistema de colisões,
-            gerenciamento de estados e eventos em tempo real.
-          </p>
-
-          <div class="project-buttons">
-
-            <a
-              href="https://phel-lip.itch.io/demo-phaser4"
-              target="_blank"
-              class="btn-demo"
-            >
-              Demo
-            </a>
-
-            <a
-              href="https://phel-lip.itch.io/demo-phaser4"
-              target="_blank"
-              class="btn-code"
-            >
-              Código
-            </a>
-
-          </div>
-
-          <ul class="project-stack">
-            <li class="tag">HTML</li>
-            <li class="tag">JavaScript</li>
-            <li class="tag">Phaser 3</li>
-          </ul>
-        </article>
-
-        <article class="project-card">
-          <img src="jogo2.png" alt="Imagem do projeto Interactive Platform System">
-
-          <h3>Interactive Platform System</h3>
-
-          <p>
-            Aplicação interativa desenvolvida com JavaScript e Phaser 3,
-            focada em lógica de gameplay, animações dinâmicas,
-            gerenciamento de estado e eventos em tempo real.
-          </p>
-
-          <div class="project-buttons">
-
-            <a
-              href="https://phel-lip.itch.io/demo-phaser3"
-              target="_blank"
-              class="btn-demo"
-            >
-              Demo
-            </a>
-
-            <a
-              href="https://phel-lip.itch.io/demo-phaser3"
-              target="_blank"
-              class="btn-code"
-            >
-              Código
-            </a>
-
-          </div>
-
-          <ul class="project-stack">
-            <li class="tag">HTML</li>
-            <li class="tag">JavaScript</li>
-            <li class="tag">Phaser 3</li>
-          </ul>
-        </article>
+          </article>
 
         </div>
       </section>
+      <section id="skills-screen" class="screen">
 
-      <section id="conhecimentos">
+        <div class="skills-grid">
 
-        <h2>03. Conhecimentos</h2>
+          <!-- STACKS -->
+          <div class="skill-card">
 
-        <h3 class="skill-subtitle"><i data-lucide="cpu" class="icon"></i>Principais Competências</h3>
+            <h3>STACKS PRINCIPAIS</h3>
 
-        <div class="skills-categories">
+            <div class="tech-grid">
 
-          <div class="category-block">
-            <h4>Front-end</h4>
+              <div class="tech-item">
+                <i class="devicon-html5-plain colored"></i>
+                <span>HTML</span>
+              </div>
 
-            <ul class="skill-group">
-              <li class="tag">HTML</li>
-              <li class="tag">CSS</li>
-              <li class="tag">JavaScript</li>
-            </ul>
+              <div class="tech-item">
+                <i class="devicon-css3-plain colored"></i>
+                <span>CSS</span>
+              </div>
+
+              <div class="tech-item">
+                <i class="devicon-javascript-plain colored"></i>
+                <span>JavaScript</span>
+              </div>
+
+              <div class="tech-item">
+                <i class="devicon-csharp-plain colored"></i>
+                <span>C#</span>
+              </div>
+
+              <div class="tech-item">
+                <i class="devicon-dotnetcore-plain colored"></i>
+                <span>.NET</span>
+              </div>
+
+              <div class="tech-item">
+                <i class="devicon-nodejs-plain colored"></i>
+                <span>Node.js</span>
+              </div>
+
+            </div>
+
           </div>
 
-          <div class="category-block">
-            <h4>Design & Conceitos</h4>
+          <!-- FERRAMENTAS -->
+          <div class="skill-card">
 
-            <ul class="skill-group">
-              <li class="tag">UX/UI</li>
-              <li class="tag">Acessibilidade</li>
-            </ul>
+            <h3>FERRAMENTAS</h3>
+
+            <div class="tech-grid">
+
+              <div class="tech-item">
+                <i class="devicon-postgresql-plain colored"></i>
+                <span>PostgreSQL</span>
+              </div>
+
+              <div class="tech-item">
+                <i class="devicon-git-plain colored"></i>
+                <span>Git</span>
+              </div>
+
+              <div class="tech-item">
+                <i class="devicon-github-original"></i>
+                <span>GitHub</span>
+              </div>
+
+              <div class="tech-item">
+                <i class="devicon-vscode-plain colored"></i>
+                <span>VS Code</span>
+              </div>
+
+              <div class="tech-item">
+                <i class="devicon-visualstudio-plain colored"></i>
+                <span>Visual Studio</span>
+              </div>
+
+              <div class="tech-item">
+                <i class="devicon-vitejs-plain colored"></i>
+                <span>Vite</span>
+              </div>
+
+              <div class="tech-item">
+                <i class="devicon-vercel-original"></i>
+                <span>Vercel</span>
+              </div>
+
+              <div class="tech-item">
+                <i class="devicon-figma-plain colored"></i>
+                <span>Figma</span>
+              </div>
+
+              <div class="tech-item">
+                <i class="devicon-unity-plain"></i>
+                <span>Unity</span>
+              </div>
+
+            </div>
+
           </div>
 
-          <div class="category-block">
-            <h4>Ferramentas & Deploy</h4>
+          <div class="skill-card">
 
-            <ul class="skill-group">
-              <li class="tag">VS Code</li>
-              <li class="tag">Git/GitHub</li>
-              <li class="tag">Vite</li>
-              <li class="tag">Vercel</li>
+            <h3>HABILIDADES</h3>
+
+            <ul>
+              <li>Consumo de APIs REST</li>
+              <li>Interfaces Responsivas</li>
+              <li>Manipulação de DOM</li>
+              <li>Versionamento com Git</li>
+              <li>Deploy com Vercel</li>
+              <li>Lógica e Algoritmos</li>
             </ul>
+
+          </div>
+
+          <!-- ATUALMENTE -->
+          <div class="skill-card">
+
+            <h3>EM EVOLUÇÃO</h3>
+
+            <div class="tech-grid secondary-tech">
+
+              <div class="tech-item">
+                <i class="devicon-react-original colored"></i>
+                <span>React</span>
+              </div>
+
+              <div class="tech-item">
+                <i class="devicon-typescript-plain colored"></i>
+                <span>TypeScript</span>
+              </div>
+
+            </div>
+
           </div>
 
         </div>
 
-        <h3 class="skill-subtitle"><i data-lucide="book-open" class="icon"></i>Em Aprendizado</h3>
-
-        <div class="skills-categories">
-
-          <div class="category-block">
-            <h4>Frameworks & Back-end</h4>
-
-            <ul class="skill-group">
-              <li class="tag">React</li>
-              <li class="tag">TypeScript</li>
-              <li class="tag">Tailwind</li>
-              <li class="tag">Node.js</li>
-            </ul>
-          </div>
-
-        </div>
       </section>
 
-      <section id="contato" class="contact-section">
+      <section id="contact-screen" class="screen">
 
-        <h2><i data-lucide="mail" class="icon"></i>Contato</h2>
+        <div class="contact-container">
 
-        <div class="contact-text">
-          <p class="contact-question">Qual é o próximo passo?</p>
+          <div class="contact-info">
 
-          <p class="contact-highlight">Entrar em contato!</p>
+            <h3>CONTATO</h3>
 
-          <p class="contact-description">
-            Estou à procura da minha primeira oportunidade na área de desenvolvimento.<br>
-            Disponível para estágio remoto ou híbrido.
-          </p>
+            <p class="contact-text">
+              Aberto a colaborar em projetos, equipes e oportunidades onde eu possa gerar valor e continuar evoluindo.
+            </p>
+
+            <p class="contact-highlight">
+              Entre em contato!
+            </p>
+
+            <div class="contact-status">
+              > status: disponível (remoto/híbrido)
+            </div>
+
+          </div>
+
+          <form class="contact-form" id="contact-form" action="https://formspree.io/f/xeewlkkz" method="POST">
+
+            <input type="text" name="nome" placeholder="Seu nome" required>
+
+            <input type="email" name="email" placeholder="Seu email" required>
+
+            <textarea name="mensagem" placeholder="Sua mensagem..." required></textarea>
+
+            <button type="submit">
+              ENVIAR MENSAGEM
+            </button>
+
+            <p id="form-status"></p>
+
+          </form>
+
         </div>
 
-        <address class="contact-links">
-          <p>
-            <i data-lucide="mail" class="icon"></i>
-            <a href="mailto:thasso2011@gmail.com">thasso2011@gmail.com</a>
-          </p>
-
-          <p>
-            <i data-lucide="user" class="icon"></i>
-            <a href="https://linkedin.com/in/thassoholanda" target="_blank">
-              linkedin.com/in/thassoholanda
-            </a>
-          </p>
-        </address>
       </section>
 
-    </main>
-
-    <footer>
-      <p>&copy; 2026 Thasso Holanda. Todos os direitos reservados.</p>
-
-      <a href="thasso-holanda-frontend-estagio.pdf" target="_blank" class="btn-cv"
-        aria-label="Baixar currículo de Thasso Holanda em PDF">
-        <span data-lucide="file-down" class="icon" aria-hidden="true"></span>Baixar Currículo</a>
-    </footer>
-  </div>
-
-  <script>
-    lucide.createIcons({
-      color: "#06B6D4"
-    });
-  </script>
-
+      <script src="script.js"></script>
 </body>
 
 </html>
