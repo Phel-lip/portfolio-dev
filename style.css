@@ -738,6 +738,7 @@ h2::before {
 }
 
 @media (max-width: 900px) {
+
   .player-overview,
   .contact-container {
     grid-template-columns: 1fr;
@@ -774,7 +775,9 @@ h2::before {
    ============================================= */
 
 @media (max-width: 768px) {
-  html, body {
+
+  html,
+  body {
     overflow: auto;
   }
 
@@ -805,10 +808,16 @@ h2::before {
     top: auto;
     left: auto;
     right: auto;
-    margin-bottom: 16px;
-    font-size: 0.65rem;
-    letter-spacing: 1.5px;
+    margin-bottom: 12px;
+    font-size: 0.6rem;
+    letter-spacing: 1px;
     padding-bottom: 8px;
+    justify-content: center;
+    gap: 12px;
+  }
+
+  #hud-left {
+    display: none;
   }
 
   #hud-center {
@@ -857,6 +866,7 @@ h2::before {
     align-items: center;
     text-align: center;
     gap: 12px;
+    width: 100%;
   }
 
   .menu-photo {
@@ -887,12 +897,16 @@ h2::before {
   }
 
   .player-data p {
-    font-size: 0.88rem;
+    font-size: 0.85rem;
     margin-bottom: 8px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
   }
 
   .player-data strong {
-    width: 90px;
+    width: auto;
+    margin-right: 8px;
     font-size: 0.8rem;
   }
 
