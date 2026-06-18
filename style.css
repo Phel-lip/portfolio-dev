@@ -424,7 +424,7 @@ h2::before {
 
 #skills-screen,
 #contact-screen {
-  padding: 35px 30px 30px;
+  padding: 30px 30px 30px;
   overflow-y: auto;
 }
 
@@ -439,8 +439,8 @@ h2::before {
 .project-card {
   display: flex;
   flex-direction: column;
-  min-height: 250px;
-  padding: 10px;
+  min-height: 210px;
+  padding: 8px;
   border: 1px solid #06b6d4;
   background: rgba(6, 182, 212, 0.05);
   transition: transform 0.2s, box-shadow 0.2s;
@@ -535,8 +535,8 @@ h2::before {
 }
 
 .skill-card {
-  height: 240px;
-  padding: 18px;
+  height: 220px;
+  padding: 14px;
   border: 1px solid rgba(6, 182, 212, 0.25);
   background: rgba(6, 182, 212, 0.05);
 }
