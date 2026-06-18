@@ -291,22 +291,13 @@ h2::before {
 .terminal-box {
   width: 280px;
   padding: 12px 14px;
-
   border: 1px solid rgba(6, 182, 212, .35);
-
   background: rgba(0, 0, 0, .25);
-
   font-family: 'Consolas', monospace;
-
   font-style: italic;
-
   line-height: 1.2;
-
   color: #67E8F9;
-
-  box-shadow:
-    inset 0 0 15px rgba(6, 182, 212, .08);
-
+  box-shadow: inset 0 0 15px rgba(6, 182, 212, .08);
   transition: .2s;
 }
 
@@ -431,7 +422,7 @@ h2::before {
 
 .projects-grid {
   display: grid;
-    grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 1vh;
   width: 100%;
   transform: none;
@@ -466,12 +457,12 @@ h2::before {
 }
 
 .project-card h3 {
-  font-size: 2.1vh;  /* ← escala com a altura da tela */
+  font-size: 2.1vh;
   margin-bottom: 0.3vh;
 }
 
 .project-card p {
-   font-size: 1.95vh;
+  font-size: 1.95vh;
   line-height: 1.3;
   margin-bottom: 0.5vh;
   -webkit-line-clamp: 2;
@@ -724,6 +715,10 @@ h2::before {
   overflow-y: auto;
 }
 
+/* =============================================
+   DESKTOP MÉDIO
+   ============================================= */
+
 @media (max-width: 1200px) {
   .container {
     padding: 80px 24px 24px;
@@ -738,12 +733,11 @@ h2::before {
   }
 
   .projects-grid {
-    grid-template-columns: repeat(2, minmax(260px, 1fr));
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media (max-width: 900px) {
-
   .player-overview,
   .contact-container {
     grid-template-columns: 1fr;
@@ -775,110 +769,286 @@ h2::before {
   }
 }
 
+/* =============================================
+   MOBILE — layout reorganizado
+   ============================================= */
+
 @media (max-width: 768px) {
-  .container {
-    margin: 120px 20px 40px;
-    padding: 24px 16px 16px;
+  html, body {
+    overflow: auto;
   }
 
-  .game-menu {
-    padding: 58px 14px 0;
+  .container {
+    height: auto;
+    min-height: 100vh;
+    margin: 0;
+    padding: 60px 12px 24px;
+    border: none;
+    box-shadow: none;
+  }
+
+  .game-screen {
+    overflow: visible;
+    border: none;
+    box-shadow: none;
+    height: auto;
+    flex: none;
+    align-items: flex-start;
+  }
+
+  .corner {
+    display: none;
   }
 
   .hud-status {
-    left: 18px;
-    right: 18px;
-    font-size: 0.72rem;
-    letter-spacing: 2px;
+    position: relative;
+    top: auto;
+    left: auto;
+    right: auto;
+    margin-bottom: 16px;
+    font-size: 0.65rem;
+    letter-spacing: 1.5px;
+    padding-bottom: 8px;
   }
 
   #hud-center {
-    min-width: 130px;
-    font-size: 0.75rem;
-    letter-spacing: 2px;
+    min-width: auto;
+    font-size: 0.7rem;
+    letter-spacing: 1.5px;
+  }
+
+  /* screens: position relative, mostrar/ocultar com display */
+  .screen {
+    position: relative;
+    inset: auto;
+    width: 100%;
+    height: auto;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    clip-path: none;
+    transition: none;
+    display: none;
+    flex-direction: column;
+  }
+
+  .screen.active {
+    display: flex;
+    clip-path: none;
+  }
+
+  /* menu */
+  .game-menu {
+    padding: 0;
+    gap: 16px;
+    height: auto;
   }
 
   .player-overview {
-    gap: 18px;
+    zoom: 1;
+    flex-direction: column;
+    gap: 16px;
+    margin: 0;
+    max-width: 100%;
   }
 
   .profile-top {
     flex-direction: column;
     align-items: center;
     text-align: center;
+    gap: 12px;
+  }
+
+  .menu-photo {
+    width: 110px;
+    height: 110px;
   }
 
   .about-mini {
-    max-width: 220px;
-    font-size: .78rem;
-    line-height: 1.45;
+    max-width: 100%;
+    font-size: 0.85rem;
+    text-align: center;
   }
 
   .terminal-box {
     width: 100%;
-  }
-
-  .menu-photo {
-    width: 150px;
-    height: 150px;
+    font-size: 0.8rem;
   }
 
   .player-data {
-    padding: 16px;
+    min-width: 0;
+    width: 100%;
+    padding: 14px;
+  }
+
+  .player-data h3 {
+    margin-bottom: 12px;
+    font-size: 0.9rem;
+  }
+
+  .player-data p {
+    font-size: 0.88rem;
+    margin-bottom: 8px;
+  }
+
+  .player-data strong {
+    width: 90px;
+    font-size: 0.8rem;
+  }
+
+  .player-focus {
+    font-size: 0.72rem;
   }
 
   .game-nav {
-    gap: 30px;
+    gap: 14px;
     flex-wrap: wrap;
+    justify-content: center;
+    padding-top: 12px;
+    margin-top: 8px;
+  }
+
+  .game-nav a {
+    font-size: 0.85rem;
+    padding-left: 18px;
+  }
+
+  .game-nav a:hover::before,
+  .game-nav a.active::before {
+    left: -18px;
+  }
+
+  .game-nav a:hover {
+    transform: translateX(4px);
+  }
+
+  /* projetos */
+  #projects-screen {
+    padding: 12px;
+    overflow: visible;
+    align-items: flex-start;
   }
 
   .projects-grid {
     grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .project-card {
+    min-height: auto;
+    padding: 12px;
+  }
+
+  .project-card img {
+    height: 150px;
+  }
+
+  .quest-id {
+    font-size: 0.65rem;
+  }
+
+  .project-card h3 {
+    font-size: 1rem;
+    margin-bottom: 4px;
+  }
+
+  .project-card p {
+    font-size: 0.85rem;
+    -webkit-line-clamp: 3;
+  }
+
+  .project-stack {
+    gap: 4px;
+    margin-top: 6px;
+  }
+
+  .project-stack .tag {
+    font-size: 0.7rem;
+    padding: 3px 8px;
+  }
+
+  .project-buttons {
+    margin-top: 8px;
+    gap: 6px;
+  }
+
+  .project-buttons a {
+    font-size: 0.8rem;
+    padding: 6px;
+  }
+
+  /* skills */
+  #skills-screen {
+    padding: 12px;
+    overflow: visible;
   }
 
   .skills-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    height: auto;
+  }
+
+  .skill-card {
+    height: auto;
+    padding: 14px;
+  }
+
+  .skill-card h3 {
+    font-size: 0.85rem;
+    margin-bottom: 10px;
+  }
+
+  .skill-card li {
+    font-size: 0.85rem;
+  }
+
+  .tech-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+  }
+
+  .tech-item {
+    font-size: 0.8rem;
+    gap: 6px;
+  }
+
+  .tech-item i {
+    font-size: 1.4rem;
+  }
+
+  /* contato */
+  #contact-screen {
+    padding: 12px;
+    overflow: visible;
+  }
+
+  .contact-container {
+    grid-template-columns: 1fr;
     gap: 14px;
+    transform: none;
+  }
+
+  .contact-highlight {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .game-nav {
+    gap: 10px;
+  }
+
+  .game-nav a {
+    font-size: 0.78rem;
   }
 
   .tech-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .contact-container {
-    gap: 18px;
-    transform: none;
-  }
-}
-
-@media (max-width: 600px) {
-  section {
-    margin: 24px auto;
-  }
-
-  .game-nav {
-    gap: 18px;
-  }
-
-  .game-nav a {
-    font-size: 0.9rem;
-    padding-left: 20px;
-  }
-
-  .game-nav a:hover::before,
-  .game-nav a.active::before {
-    left: -20px;
-  }
-
-  .game-nav a:hover {
-    transform: translateX(6px);
-  }
-
-  .tech-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .project-card p {
-    -webkit-line-clamp: 3;
+  .project-card img {
+    height: 120px;
   }
 
   .save-content {
@@ -890,9 +1060,5 @@ h2::before {
   .save-photo {
     width: 140px;
     height: 140px;
-  }
-
-  .contact-highlight {
-    font-size: 1.1rem;
   }
 }
