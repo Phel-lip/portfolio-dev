@@ -104,8 +104,7 @@ h2::before {
 .container {
   width: 100%;
   max-width: 1200px;
-  /* CORRIGIDO: era height: 100vh — corta conteúdo em telas pequenas */
-  height: calc(100vh - 0px);
+  height: 100vh;
   margin: 0 auto;
   padding: 80px 40px 40px;
   display: flex;
@@ -120,7 +119,8 @@ h2::before {
   flex: 1;
   display: flex;
   align-items: center;
-  /* CORRIGIDO: overflow: hidden duplo bloqueava scroll — mantém só o necessário */
+  overflow-y: auto;
+  overflow-x: hidden;
   overflow: hidden;
   border: 2px solid #06b6d4;
   background: linear-gradient(to bottom, rgba(6, 182, 212, 0.03), rgba(0, 0, 0, 0.2));
@@ -243,7 +243,7 @@ h2::before {
   gap: 35px;
   max-width: 1000px;
   margin: 0 auto;
-  /* CORRIGIDO: removido zoom: 0.95 — não-padrão, comporta diferente por browser */
+  zoom: 0.95;
 }
 
 .left-panel,
@@ -291,13 +291,22 @@ h2::before {
 .terminal-box {
   width: 280px;
   padding: 12px 14px;
+
   border: 1px solid rgba(6, 182, 212, .35);
+
   background: rgba(0, 0, 0, .25);
+
   font-family: 'Consolas', monospace;
+
   font-style: italic;
+
   line-height: 1.2;
+
   color: #67E8F9;
-  box-shadow: inset 0 0 15px rgba(6, 182, 212, .08);
+
+  box-shadow:
+    inset 0 0 15px rgba(6, 182, 212, .08);
+
   transition: .2s;
 }
 
@@ -408,10 +417,6 @@ h2::before {
   transform: translateX(10px);
 }
 
-/* =============================================
-   PROJETOS — corrigido para consistência cross-env
-   ============================================= */
-
 #projects-screen {
   padding: 40px 30px 30px;
   overflow-y: auto;
@@ -425,16 +430,16 @@ h2::before {
 
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(260px, 1fr));
   gap: 16px;
   width: 100%;
-  /* CORRIGIDO: removido transform: translateY(-15px) — causa desalinhamento no GitHub Pages */
+  transform: translateY(-15px);
 }
 
 .project-card {
   display: flex;
   flex-direction: column;
-  /* CORRIGIDO: removido min-height fixo — deixa o conteúdo definir a altura */
+  min-height: 210px;
   padding: 8px;
   border: 1px solid #06b6d4;
   background: rgba(6, 182, 212, 0.05);
@@ -448,12 +453,9 @@ h2::before {
 
 .project-card img {
   width: 100%;
-  /* CORRIGIDO: altura proporcional via aspect-ratio — consistente em qualquer zoom */
-  aspect-ratio: 16 / 7;
-  height: auto;
+  height: 90px;
   margin-bottom: 8px;
   object-fit: cover;
-  display: block;
 }
 
 .quest-id {
@@ -471,8 +473,6 @@ h2::before {
   margin-bottom: 8px;
   font-size: 0.82rem;
   line-height: 1.3;
-  /* CORRIGIDO: flex-grow empurra botões pro fundo do card */
-  flex-grow: 1;
   display: -webkit-box;
   overflow: hidden;
   -webkit-box-orient: vertical;
@@ -483,7 +483,7 @@ h2::before {
   display: flex;
   flex-wrap: wrap;
   gap: 6px;
-  margin-top: auto;
+  margin-top: 10px;
 }
 
 .project-stack .tag {
@@ -502,7 +502,6 @@ h2::before {
   display: flex;
   gap: 6px;
   margin-top: 8px;
-  flex-shrink: 0;
 }
 
 .project-buttons a {
@@ -525,22 +524,18 @@ h2::before {
   color: #06b6d4;
 }
 
-/* =============================================
-   SKILLS — corrigido para consistência cross-env
-   ============================================= */
-
 .skills-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(2, 1fr);
   column-gap: 16px;
-  row-gap: 16px;
+  row-gap: 0px;
   width: 100%;
   max-width: 900px;
   margin: 0 auto;
 }
 
 .skill-card {
-  /* CORRIGIDO: removido height: 220px fixo — causa overflow e corte no GitHub Pages */
+  height: 220px;
   padding: 14px;
   border: 1px solid rgba(6, 182, 212, 0.25);
   background: rgba(6, 182, 212, 0.05);
@@ -588,7 +583,7 @@ h2::before {
 
 .tech-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 14px;
 }
 
@@ -628,10 +623,6 @@ h2::before {
   transform: translateY(-3px);
 }
 
-/* =============================================
-   CONTATO
-   ============================================= */
-
 .contact-container {
   width: 100%;
   max-width: 900px;
@@ -639,7 +630,8 @@ h2::before {
   display: grid;
   grid-template-columns: 1fr 1.4fr;
   gap: 25px;
-  /* CORRIGIDO: removido transform: scale(0.95) — comporta diferente por ambiente */
+  transform: scale(0.95);
+  transform-origin: top center;
 }
 
 .contact-info,
@@ -731,10 +723,6 @@ h2::before {
   overflow-y: auto;
 }
 
-/* =============================================
-   RESPONSIVE
-   ============================================= */
-
 @media (max-width: 1200px) {
   .container {
     padding: 80px 24px 24px;
@@ -749,11 +737,12 @@ h2::before {
   }
 
   .projects-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: repeat(2, minmax(260px, 1fr));
   }
 }
 
 @media (max-width: 900px) {
+
   .player-overview,
   .contact-container {
     grid-template-columns: 1fr;
@@ -851,11 +840,12 @@ h2::before {
   }
 
   .tech-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .contact-container {
     gap: 18px;
+    transform: none;
   }
 }
 
