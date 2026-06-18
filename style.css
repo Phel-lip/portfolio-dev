@@ -104,7 +104,7 @@ h2::before {
 .container {
   width: 100%;
   max-width: 1200px;
-  min-height: 100vh;
+  height: 100vh;
   margin: 0 auto;
   padding: 80px 40px 40px;
   display: flex;
@@ -228,7 +228,7 @@ h2::before {
 
 .game-menu {
   width: 100%;
-  min-height: 100%;
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -243,8 +243,7 @@ h2::before {
   gap: 35px;
   max-width: 1000px;
   margin: 0 auto;
-  transform: scale(.95);
-  transform-origin: top center;
+  zoom: 0.95;
 }
 
 .left-panel,
@@ -265,8 +264,8 @@ h2::before {
 }
 
 .menu-photo {
-  width: 180px;
-  height: 180px;
+  width: 170px;
+  height: 170px;
   object-fit: cover;
   border: 2px solid #06b6d4;
   box-shadow: 0 0 15px rgba(6, 182, 212, 0.3);
