@@ -26,6 +26,41 @@ const hudTitles = {
     "contact-screen": "CONTATO"
 };
 
+function fitScreens() {
+  const projectsGrid = document.querySelector('.projects-grid');
+  const skillsGrid   = document.querySelector('.skills-grid');
+
+  if (!projectsGrid && !skillsGrid) return;
+
+  const availH = document.querySelector('.game-screen')?.clientHeight || 0;
+  const availW = document.querySelector('.game-screen')?.clientWidth  || 0;
+
+  // Projetos
+  if (projectsGrid) {
+    const naturalH = projectsGrid.scrollHeight;
+    const naturalW = projectsGrid.scrollWidth;
+    const scaleH   = (availH - 80) / naturalH;
+    const scaleW   = availW / naturalW;
+    const scale    = Math.min(scaleH, scaleW, 1);
+    projectsGrid.style.transformOrigin = 'top center';
+    projectsGrid.style.transform       = scale < 1 ? `scale(${scale})` : '';
+  }
+
+  // Skills
+  if (skillsGrid) {
+    const naturalH = skillsGrid.scrollHeight;
+    const naturalW = skillsGrid.scrollWidth;
+    const scaleH   = (availH - 60) / naturalH;
+    const scaleW   = availW / naturalW;
+    const scale    = Math.min(scaleH, scaleW, 1);
+    skillsGrid.style.transformOrigin = 'top center';
+    skillsGrid.style.transform       = scale < 1 ? `scale(${scale})` : '';
+  }
+}
+
+fitScreens();
+window.addEventListener('resize', fitScreens);
+
 function showScreen(screenId) {
 
     screens.forEach(screen =>
