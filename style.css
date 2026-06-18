@@ -419,7 +419,7 @@ h2::before {
 
 #projects-screen {
   padding: 40px 30px 30px;
-  overflow-y: auto;
+  overflow: hidden;
 }
 
 #skills-screen,
@@ -430,17 +430,17 @@ h2::before {
 
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(260px, 1fr));
-  gap: 16px;
+    grid-template-columns: repeat(3, 1fr);
+  gap: 1vh;
   width: 100%;
-  transform: translateY(-15px);
+  transform: none;
 }
 
 .project-card {
   display: flex;
   flex-direction: column;
   min-height: 210px;
-  padding: 8px;
+  padding: 0.8vh;
   border: 1px solid #06b6d4;
   background: rgba(6, 182, 212, 0.05);
   transition: transform 0.2s, box-shadow 0.2s;
@@ -453,30 +453,30 @@ h2::before {
 
 .project-card img {
   width: 100%;
-  height: 90px;
-  margin-bottom: 8px;
+  height: 9vh;
   object-fit: cover;
+  margin-bottom: 0.5vh;
 }
 
 .quest-id {
-  color: #67e8f9;
-  font-size: 0.65rem;
+  font-size: 1.7vh;
   letter-spacing: 2px;
+  color: #67e8f9;
 }
 
 .project-card h3 {
-  margin-bottom: 5px;
-  font-size: 0.95rem;
+  font-size: 2.1vh;  /* ← escala com a altura da tela */
+  margin-bottom: 0.3vh;
 }
 
 .project-card p {
-  margin-bottom: 8px;
-  font-size: 0.82rem;
+   font-size: 1.95vh;
   line-height: 1.3;
+  margin-bottom: 0.5vh;
+  -webkit-line-clamp: 2;
   display: -webkit-box;
   overflow: hidden;
   -webkit-box-orient: vertical;
-  -webkit-line-clamp: 2;
 }
 
 .project-stack {
@@ -488,8 +488,8 @@ h2::before {
 
 .project-stack .tag {
   margin: 0;
-  padding: 2px 6px;
-  font-size: 0.6rem;
+  padding: 0.2vh 0.5vh;
+  font-size: 1.65vh;
   opacity: 0.8;
 }
 
@@ -506,9 +506,9 @@ h2::before {
 
 .project-buttons a {
   flex: 1;
-  padding: 4px;
+  padding: 0.4vh;
+  font-size: 1.8vh;
   border-radius: 6px;
-  font-size: 0.7rem;
   font-weight: 700;
   text-align: center;
   text-decoration: none;
