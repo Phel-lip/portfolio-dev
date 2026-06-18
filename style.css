@@ -418,8 +418,9 @@ h2::before {
 }
 
 #projects-screen {
-  padding: 25px 30px 30px;
+  padding: 30px 30px 30px;
   overflow: hidden;
+  align-items: flex-start;
 }
 
 #skills-screen,
