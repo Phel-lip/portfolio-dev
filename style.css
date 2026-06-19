@@ -769,6 +769,7 @@ h2::before {
     max-width: 100%;
   }
 }
+
 /* =============================================
    MOBILE — layout reorganizado
    ============================================= */
@@ -807,25 +808,35 @@ h2::before {
     top: auto;
     left: auto;
     right: auto;
-    margin-bottom: 12px;
-    font-size: 0.65rem;
-    letter-spacing: 1px;
-    padding-bottom: 8px;
+    display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 6px;
+    justify-content: center;
+    gap: 4px;
     text-align: center;
+    margin-bottom: 16px;
+    padding-bottom: 8px;
+    font-size: 0.65rem;
+    letter-spacing: 1px;
+    border-bottom: 1px solid rgba(6, 182, 212, 0.2);
   }
 
   #hud-left {
+    order: 2;
     font-size: 0.65rem;
     letter-spacing: 1px;
+    color: #67e8f9;
   }
 
   #hud-center {
+    order: 1;
     min-width: auto;
     font-size: 0.7rem;
     letter-spacing: 1.5px;
+  }
+
+  .online-status {
+    order: 3;
   }
 
   /* screens: position relative, mostrar/ocultar com display */
