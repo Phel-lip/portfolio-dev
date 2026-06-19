@@ -769,7 +769,6 @@ h2::before {
     max-width: 100%;
   }
 }
-
 /* =============================================
    MOBILE — layout reorganizado
    ============================================= */
@@ -809,15 +808,18 @@ h2::before {
     left: auto;
     right: auto;
     margin-bottom: 12px;
-    font-size: 0.6rem;
+    font-size: 0.65rem;
     letter-spacing: 1px;
     padding-bottom: 8px;
-    justify-content: center;
-    gap: 12px;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    text-align: center;
   }
 
   #hud-left {
-    display: none;
+    font-size: 0.65rem;
+    letter-spacing: 1px;
   }
 
   #hud-center {
