@@ -772,7 +772,6 @@ h2::before {
 /* =============================================
    MOBILE — layout reorganizado
    ============================================= */
-
 @media (max-width: 768px) {
 
   html,
@@ -795,7 +794,9 @@ h2::before {
     box-shadow: none;
     height: auto;
     flex: none;
-    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
   }
 
   .corner {
@@ -808,6 +809,7 @@ h2::before {
     left: auto;
     right: auto;
     width: 100%;
+    box-sizing: border-box;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -826,6 +828,9 @@ h2::before {
     letter-spacing: 1px;
     color: #67e8f9;
     text-align: left;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 
   #hud-center {
@@ -840,9 +845,9 @@ h2::before {
     flex: 1;
     font-size: 0.6rem;
     text-align: right;
+    white-space: nowrap;
   }
 
-  /* screens: position relative, mostrar/ocultar com display */
   .screen {
     position: relative;
     inset: auto;
@@ -860,11 +865,6 @@ h2::before {
   .screen.active {
     display: flex;
     clip-path: none;
-  }
-
-  /* menu */
-  #menu-screen {
-    flex-direction: column;
   }
 
   .game-menu {
@@ -969,7 +969,6 @@ h2::before {
     transform: translateX(4px);
   }
 
-  /* projetos */
   #projects-screen {
     padding: 12px;
     overflow: visible;
@@ -1024,7 +1023,6 @@ h2::before {
     padding: 6px;
   }
 
-  /* skills */
   #skills-screen {
     padding: 12px;
     overflow: visible;
@@ -1064,7 +1062,6 @@ h2::before {
     font-size: 1.4rem;
   }
 
-  /* contato */
   #contact-screen {
     padding: 12px;
     overflow: visible;
