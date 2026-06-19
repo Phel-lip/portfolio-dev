@@ -824,8 +824,8 @@ h2::before {
 
   #hud-left {
     flex: 1;
-    font-size: 0.6rem;
-    letter-spacing: 1px;
+    font-size: 0.52rem;
+    letter-spacing: 0.5px;
     color: #67e8f9;
     text-align: left;
     white-space: nowrap;
