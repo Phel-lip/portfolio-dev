@@ -1,83 +1,161 @@
-# Portfólio - Thasso Felipe – Front-End Developer
+# Portfólio - Thasso Holanda | Front-End Developer
 
-Desenvolvedor Front-End em formação, com foco em **React, TypeScript e interfaces interativas**.
-Tenho interesse em construir aplicações modernas com boa experiência do usuário, especialmente envolvendo **gamificação, organização de tarefas e produtos digitais**.
+Portfólio desenvolvido para apresentar minha transição de Game Development para o Desenvolvimento Front-End, reunindo projetos que demonstram minha evolução técnica por meio de aplicações web construídas com diferentes tecnologias e desafios.
 
 ## Sobre mim
 
-Estudante de Jogos Digitais (IFBA), em transição para desenvolvimento web, com experiência prática em criação de aplicações utilizando **React, JavaScript e gerenciamento de estado**.
-Busco minha primeira oportunidade como desenvolvedor front-end, contribuindo em projetos reais enquanto evoluo para nível júnior.
+Sou estudante de Jogos Digitais (IFBA) em transição para o desenvolvimento Front-End.
 
-## Tecnologias utilizadas
+Minha experiência com desenvolvimento de jogos despertou o interesse pela criação de interfaces interativas e produtos digitais. Desde então, venho construindo projetos que exploram desde HTML, CSS e JavaScript até React, Next.js, consumo de APIs REST e integração entre Front-End e Back-End.
 
-**Front-end**
-- React
-- TypeScript
-- JavaScript (ES6+)
+Atualmente busco minha primeira oportunidade como Desenvolvedor Front-End, aplicando fundamentos sólidos enquanto continuo evoluindo tecnicamente.
+
+---
+
+## Tecnologias
+
+### Front-End
+
 - HTML5
 - CSS3
+- JavaScript
+- React
+- TypeScript
+- Next.js
 - Tailwind CSS
+- Vite
 
-**Outros**
-- Zustand (gerenciamento de estado)
-- Git / GitHub
+### Back-End
+
+- ASP.NET Core Web API
+- Entity Framework Core
+
+### Banco de Dados
+
+- PostgreSQL
+
+### Ferramentas
+
+- Git
+- GitHub
+- Vercel
 - Unity (C#)
 
-## Projetos em destaque
+---
 
-### DailyXP
-Aplicação web gamificada para gerenciamento de tarefas e rotina.
+# Projetos em Destaque
 
-- Sistema de progresso e níveis (gamificação)
-- Gerenciamento de estado global com Zustand
-- Interface interativa com feedback visual
-- Persistência de dados no navegador
+## DailyXP
 
-**Stack:** React, TypeScript, Tailwind, Zustand  
-🔗 https://routine-app-kx96.vercel.app/
+Aplicação Full Stack que transforma mecânicas de jogos em um sistema de acompanhamento de hábitos.
+
+Principais conceitos:
+
+- Arquitetura Front-End + Back-End
+- Integração entre React e ASP.NET Core
+- Persistência em PostgreSQL
+- API REST
+- Componentização
+- CRUD completo
+
+**Stack:** React • TypeScript • Vite • ASP.NET Core • Entity Framework • PostgreSQL
 
 ---
 
-### Landing Page – Evoluir Clínica
-Landing page moderna com foco em conversão e geração de leads via WhatsApp.
+## Clinic Landing
 
-- Design responsivo
-- Estrutura otimizada para conversão
-- UX focado em clareza e ação
+Primeiro projeto entregue para um cliente real, com foco em adaptação e manutenção de uma aplicação moderna.
 
-**Stack:** React, Next.js, TypeScript, Tailwind  
-🔗 https://evoluir-clinica.vercel.app/
+Principais conceitos:
 
----
+- Componentização
+- Responsividade
+- Organização de projeto em Next.js
+- Tailwind CSS
+- Deploy na Vercel
 
-### Portal IFBA
-Hub web para centralização de páginas institucionais.
-
-- Estrutura simples e funcional
-- Navegação clara e acessível
-
-**Stack:** HTML, CSS, JavaScript  
-🔗 https://phel-lip.github.io/Projeto-Portal/
+**Stack:** React • Next.js • TypeScript • Tailwind CSS
 
 ---
 
-### Projetos com Jogos (Diferencial)
-Experiência com desenvolvimento de jogos e sistemas interativos.
+## Wiki Gamer
 
-- BFS em Unity (visualização de algoritmo)
-- Jogos 2D e 3D publicados
+Aplicação que consome a API RAWG para pesquisa de jogos e exibição dinâmica de informações.
+
+Principais conceitos:
+
+- Consumo de API REST
+- Manipulação do DOM
+- Renderização dinâmica
+- Requisições assíncronas
+- Interface responsiva
+
+**Stack:** HTML • CSS • JavaScript • REST API
+
+---
+
+## Portal IFBA
+
+Aplicação desenvolvida para centralizar informações e facilitar o acesso rápido a páginas importantes.
+
+Principais conceitos:
+
+- HTML semântico
+- CSS responsivo
+- JavaScript
+- Organização de interface
+- Acessibilidade
+
+**Stack:** HTML • CSS • JavaScript
+
+---
+
+## BFS Algorithm Visualizer
+
+Visualizador interativo do algoritmo Breadth-First Search desenvolvido em equipe durante a graduação.
+
+Principais conceitos:
+
+- Algoritmos
+- Estruturas de dados
+- Lógica de programação
+- Desenvolvimento colaborativo
+- Unity WebGL
+
+**Stack:** Unity • C#
+
+---
+
+## Jogos Desenvolvidos
+
+Projetos publicados durante minha formação em Jogos Digitais.
 
 🔗 https://phel-lip.itch.io/
 
 ---
 
-## Acesso
-https://phel-lip.github.io/Portf-lio/
+## Acesse o Portfólio
+
+https://phel-lip.github.io/portfolio-dev/
+
+---
 
 ## Objetivo
-Atuar como **estagiário em desenvolvimento front-end**, trabalhando com React e aplicações web modernas, com foco em interfaces interativas e experiência do usuário.
+
+Busco minha primeira oportunidade como Desenvolvedor Front-End (Estágio ou Júnior), contribuindo em projetos reais enquanto continuo evoluindo em desenvolvimento web, arquitetura de aplicações e boas práticas de programação.
+
+---
 
 ## Contato
-- LinkedIn: https://linkedin.com/in/thassoholanda
-- Email: thasso2011@gmail.com
-- Portfólio: https://phel-lip.github.io/portfolio-dev/
+
+GitHub:
+https://github.com/Phel-lip
+
+LinkedIn:
+https://linkedin.com/in/thassoholanda
+
+E-mail:
+thasso2011@gmail.com
+
+Portfólio:
+https://phel-lip.github.io/portfolio-dev/
