@@ -1,6 +1,6 @@
 # Portfólio - Thasso Holanda | Front-End Developer
 
-Portfólio desenvolvido para apresentar minha transição de Game Development para o Desenvolvimento Front-End, reunindo projetos que demonstram minha evolução técnica por meio de aplicações web construídas com diferentes tecnologias e desafios.
+Portfólio reunindo projetos que demonstram minha evolução técnica por meio de aplicações web construídas com diferentes tecnologias e desafios.
 
 ## Sobre mim
 
