@@ -244,6 +244,7 @@ h2::before {
   max-width: 1000px;
   margin: 0 auto;
   zoom: 0.95;
+  flex-shrink: 0;
 }
 
 .left-panel,
