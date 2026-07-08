@@ -243,8 +243,7 @@ h2::before {
   gap: 35px;
   max-width: 1000px;
   margin: 0 auto;
-  transform: scale(0.95);
-  transform-origin: top center;
+  zoom: 0.95;
 }
 
 .left-panel,
