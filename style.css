@@ -229,7 +229,7 @@ h2::before {
   padding: 55px 60px 25px;
   display: flex;
   flex-direction: column;
-  gap: 18px;
+  gap: 0px;
 }
 
 .player-overview {
