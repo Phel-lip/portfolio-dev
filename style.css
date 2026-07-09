@@ -119,8 +119,6 @@ h2::before {
   flex: 1;
   display: flex;
   align-items: flex-start;
-  overflow-y: auto;
-  overflow-x: hidden;
   overflow: hidden;
   border: 2px solid #06b6d4;
   background: linear-gradient(to bottom, rgba(6, 182, 212, 0.03), rgba(0, 0, 0, 0.2));
@@ -228,7 +226,7 @@ h2::before {
 
 .game-menu {
   width: 100%;
-  min-height: 100%;
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -243,7 +241,8 @@ h2::before {
   gap: 35px;
   max-width: 1000px;
   margin: 0 auto;
-  zoom: 0.95;
+  transform: scale(.95);
+  transform-origin: top center;
   flex-shrink: 0;
 }
 
@@ -339,7 +338,7 @@ h2::before {
 }
 
 .player-focus {
-  margin-top: 8px;
+  margin-top:auto;
   padding-top: 8px;
   border-top: 1px solid rgba(6, 182, 212, 0.15);
   color: #94a3b8;
@@ -363,7 +362,7 @@ h2::before {
   display: flex;
   justify-content: center;
   gap: 80px;
-  margin-top: 5px;
+  margin-top: auto;
   padding-top: 15px;
   border-top: 1px solid rgba(6, 182, 212, 0.2);
   flex-shrink: 0;
@@ -714,6 +713,7 @@ h2::before {
 
 #menu-screen {
   overflow-y: auto;
+  overflow-x: hidden;
 }
 
 /* =============================================
@@ -873,6 +873,7 @@ h2::before {
     gap: 16px;
     height: auto;
     width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
