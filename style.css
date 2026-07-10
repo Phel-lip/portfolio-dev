@@ -599,6 +599,11 @@ h2::before {
   font-size: clamp(2.2rem, 2.8vh, 1.9rem);
 }
 
+.tech-item img{
+    width: 1.8rem;
+    height: 1.8rem;
+}
+
 .skills-icons {
   display: flex;
   flex-wrap: wrap;
@@ -769,6 +774,7 @@ h2::before {
     max-width: 100%;
   }
 }
+
 /* =============================================
    MOBILE — layout reorganizado
    ============================================= */
