@@ -1,3 +1,7 @@
+lucide.createIcons({
+    color: "#06B6D4"
+});
+
 const menuLinks = document.querySelectorAll("[data-screen]");
 const screens = document.querySelectorAll(".screen");
 const hudLeft = document.getElementById("hud-left");
@@ -17,13 +21,11 @@ function showScreen(screenId) {
 
     if (screenId === "menu-screen") {
         hudLeft.textContent = "PERFIL { dev-phellip }";
-        hudLeft.disabled = true;
         updateClock();
         return;
     }
 
     hudLeft.textContent = "◄ VOLTAR AO MENU";
-    hudLeft.disabled = false;
     hudCenter.textContent = hudTitles[screenId];
 }
 
