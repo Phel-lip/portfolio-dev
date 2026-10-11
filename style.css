@@ -410,14 +410,14 @@ h2::before {
 
 #projects-screen {
   padding: 30px 30px 30px;
-  overflow: hidden;
+  overflow-y: auto;
   align-items: flex-start;
 }
 
 #skills-screen,
 #contact-screen {
   padding: 4vh 3vw;
-  overflow: hidden;
+  overflow-y: auto;
 }
 
 .projects-grid {
