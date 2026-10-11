@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 
 <head>
   <meta charset="UTF-8" />
@@ -7,15 +7,16 @@
   <title>Thasso Holanda | Portfólio Dev</title>
   <meta name="description"
     content="Portfólio de Thasso Holanda, desenvolvedor Full Stack • React • ASP.NET Core • PostgreSQL com foco em interfaces interativas, experiência do usuário e aplicações web." />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
 </head>
 
 <body>
   <nav class="navbar-top">
-    <a href="Thasso_Holanda_CV.pdf" target="_blank" rel="noopener noreferrer">Currículo</a>
-    <a href="https://github.com/Phel-lip" target="_blank" rel="noopener noreferrer">GitHub</a>
-    <a href="https://linkedin.com/in/thassoholanda" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+    <a href="Thasso_Holanda_CV.pdf" target="_blank">Currículo</a>
+    <a href="https://github.com/Phel-lip" target="_blank">GitHub</a>
+    <a href="https://linkedin.com/in/thassoholanda" target="_blank">LinkedIn</a>
   </nav>
 
   <div class="container">
@@ -28,7 +29,7 @@
       <span class="corner bottom-right"></span>
 
       <div class="hud-status">
-        <button type="button" id="hud-left" disabled>PERFIL { dev-phellip }</button>
+        <span id="hud-left">PERFIL { dev-phellip }</span>
         <span id="hud-center">00:00:00</span>
         <span class="online-status">ONLINE</span>
       </div>
@@ -44,7 +45,7 @@
 
               <div class="profile-top">
 
-                <img src="fotoTF.png" alt="Foto de Thasso Holanda" class="menu-photo">
+                <img src="fotoTF.png" alt="Phellip" class="menu-photo">
 
                 <div class="about-mini">
 
@@ -207,12 +208,13 @@
 
             <div class="project-stack">
               <span class="tag">JavaScript</span>
-              <span class="tag">Phaser 3</span>
+              <span class="tag">HTML</span>
+              <span class="tag">CSS</span>
             </div>
 
             <div class="project-buttons">
               <a href="https://phel-lip.itch.io/demo-phaser4" class="btn-demo">Demo</a>
-              <a href="https://github.com/Phel-lip/Demo-Joguinho-2D" class="btn-code">Code</a>
+              <a href="https://github.com/Phel-lip/demo-phaser4" class="btn-code">Code</a>
             </div>
 
           </article>
@@ -226,7 +228,7 @@
             <h3>Clinic Landing</h3>
 
             <p>
-              Landing Page para cliente real, com foco em conversão e responsividade.
+              Landing Page para cliente real, com <br> foco em conversão e responsividade.
             </p>
 
             <div class="project-stack">
@@ -244,11 +246,11 @@
 
           <article class="project-card">
 
-            <img src="portalifba.png" alt="Portal Institucional">
+            <img src="portalifba.png" alt="Portal IFBA">
 
             <span class="quest-id">PROJETO WEB</span>
 
-            <h3>Portal Institucional</h3>
+            <h3>Portal IFBA</h3>
 
             <p>
               Central acadêmica criada para organizar recursos e facilitar acessos.
@@ -411,20 +413,17 @@
 
           <form class="contact-form" id="contact-form" action="https://formspree.io/f/xeewlkkz" method="POST">
 
-            <label for="contact-name">Nome</label>
-            <input id="contact-name" type="text" name="nome" placeholder="Seu nome" required>
+            <input type="text" name="nome" placeholder="Seu nome" required>
 
-            <label for="contact-email">E-mail</label>
-            <input id="contact-email" type="email" name="email" placeholder="Seu e-mail" required>
+            <input type="email" name="email" placeholder="Seu email" required>
 
-            <label for="contact-message">Mensagem</label>
-            <textarea id="contact-message" name="mensagem" placeholder="Sua mensagem..." required></textarea>
+            <textarea name="mensagem" placeholder="Sua mensagem..." required></textarea>
 
             <button type="submit">
               ENVIAR MENSAGEM
             </button>
 
-            <p id="form-status" aria-live="polite"></p>
+            <p id="form-status"></p>
 
           </form>
 
@@ -432,10 +431,7 @@
 
       </section>
 
-    </div>
-  </div>
-
-  <script src="script.js"></script>
+      <script src="script.js"></script>
 
 </body>
 
